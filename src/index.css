@@ -1,3 +1,12 @@
+:root {
+  --cor-fundo: #77dbf1;
+  --cor-secundaria: #0C87F2;
+  --cor-letras: #01091b;
+  --cor-laranja: #F2B705;
+  --cor-branca: #F2F2F2;
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +15,7 @@
 
   body {
     width: 100%;
-    background-color: beige;
+    background-color: var(--cor-fundo);
   }
   
   li {

@@ -5,93 +5,63 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    color: var(--cor-letras);
 
-.info_home {
     h1 {
-        font-size: 44px;
-        text-align: left;
-        font-weight: 700;
+        font-size: 40px;
+        padding-bottom: 60px;
     }
+}
 
-     p {
-        font-size: 20px;
+.home_banner_info {
+    h2 {
+        font-size: 28px;
         text-align: center;
-        padding-top:20px;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 10px;
     }
 }
 
-.btn_home button{
-    padding: 20px 40px;
-    border-radius: 20px;
-    border: none;
-    margin: 20px;
-    background-color: darkorange;
-    color: #ffff;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
+.games_home_section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding-top: 40px;
+    width: 100%;
+    max-width: 1200px;
 }
 
-@media (max-width: 928px) {
-    .info_home {
-        h1 {
-            font-size: 38px;
-        }
-
-        p {
-            font-size: 18px;
-        }
-    }
-
-    .btn_home button {
-        padding: 18px 30px;
-    }
-}
-
-@media (max-width: 800px) {
-   .info_home {
+.games_cards {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-        h1 {
-            font-size: 32px;
-            text-align: center;
-        }
-
-        p {
-            font-size: 18px;
-            text-align: center;
-            width: 90%;
-        }
-    }
-}
-
-@media (max-width: 408px) {
-    .btn_home button {
-        padding: 20px;
-    }
-}
-
-
-@media (max-width: 368px) {
-
-    .info_home {
     
-            h1 {
-                font-size: 30px;
-                text-align: center;
-            }
-    
-            p {
-                font-size: 16px;
-                text-align: center;
-                width: 90%;
-            }
+    h3 {
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        padding-top: 10px;
     }
-    
-        .btn_home button {
-        padding: 16px;
+
+    p {
+        width: 300px;
+        padding-top: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    button {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 14px 26px;
+        margin-top: 10px;
+        background-color: var(--cor-laranja);
+        border: none;
+        border-radius: 20px;
+        color: #fff;
     }
 }

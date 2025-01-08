@@ -1,4 +1,4 @@
-import { FaBars, FaSearch, FaUser} from 'react-icons/fa';
+import { FaBars, FaSearch} from 'react-icons/fa';
 import './Header.css';
 import { useState } from 'react';
 import { Link } from 'react-router';
@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <header>
             <nav>
-                <div className='nav-logo'>
+                <div className='nav-logo'> {/*Mudar o logo para algo mais chamativo e infantil */}
                     <img src='/images/logo.png' alt='Logo ABC Divertido'/>
                 </div>
 
@@ -26,13 +26,10 @@ const Header = () => {
                             <Link to="/">Inicio</Link>
                         </li>
                         <li>
-                            <Link to="/jogos">Jogos Educativos</Link>
+                            <Link to="/">Histórias infantis</Link>
                         </li>
                         <li>
-                            <Link to="/">Histórias</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Atividades</Link>
+                            <Link to="/conheca-mais">Conheça Mais</Link>
                         </li>
                     </ul>
                 </div>
@@ -40,10 +37,6 @@ const Header = () => {
                 <div className='nav-search'> 
                     <input type='search' placeholder='O que você procura?'/>
                     <FaSearch size={16} color="gray"/>
-                </div>
-
-                <div className='nav-user'>
-                    <FaUser color='gray' size={16}/>
                 </div>
             </nav>
         </header>
