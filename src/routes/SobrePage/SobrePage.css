@@ -1,0 +1,100 @@
+
+.sobre-section {
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho-sobre {
+    padding-bottom: 40px;
+
+    h1 {
+        font-size: 42px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+.descricao-sobre, .info-sobre, .pais-sobre {
+    width: 40%;
+    padding-top: 30px;
+
+    h3 {
+        font-size: 28px;
+        font-weight: 600;
+        padding-bottom: 8px;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 700px) {
+    .cabecalho-sobre {
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            padding: 0 40px;
+        }
+    }
+
+    .descricao-sobre, .info-sobre, .pais-sobre{
+        width: 80%;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 673px) {
+    .cabecalho-sobre {
+        padding-top: 30px;
+        
+        h1 {
+            font-size: 38px;
+        }
+
+        p {
+            padding: 0 40px;
+        }
+    }
+
+    .descricao-sobre, .info-sobre, .pais-sobre{
+        width: 70%;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 444px) {
+    .cabecalho-sobre {
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .descricao-sobre, .info-sobre, .pais-sobre{
+        h3 {
+            font-size: 26px;
+            font-weight: 600;
+        }
+    
+        p {
+            font-size: 18px;
+            text-align: justify;
+        }
+    }
+}
