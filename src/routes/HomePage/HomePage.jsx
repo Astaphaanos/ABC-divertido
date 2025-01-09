@@ -1,4 +1,5 @@
 import './HomePage.css';
+import { Link } from 'react-router-dom'; 
 
 const games = [
     {
@@ -6,6 +7,7 @@ const games = [
         title: "Qual o nome da imagem?",
         description: "Arraste as letras para combinar com as imagens",
         image: '',
+        route: ''
     },
 
     {
@@ -13,6 +15,7 @@ const games = [
         title: "Joga da memória dos bichinhos",
         description: "Combine as cartas para encontrar as palavras corretas",
         image: '',
+        route: 'jogo-memoria'
     },
 
     {
@@ -39,7 +42,9 @@ const HomePage = () => {
                                 <img src="https://via.placeholder.com/300x200" alt="Placeholder" />
                                 <h3>{game.title}</h3>
                                 <p>{game.description}</p>
-                                <button type='button'>Jogar Agora</button>
+                                <Link to={game.route}>
+                                    <button type='button'>Jogar Agora</button>
+                                </Link>
                             </div>
                         ))}
                     </div>

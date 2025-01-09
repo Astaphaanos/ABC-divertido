@@ -1,0 +1,49 @@
+
+.jogo_memoria {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card_grid_jogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    justify-items: center;
+  }
+  
+  .card {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .card.flipped .front {
+    transform: rotateY(0);
+  }
+  
+  .card.flipped .back {
+    transform: rotateY(180deg);
+  }
+  
+  .card .front,
+  .card .back {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .card .front {
+    background-color: #fff;
+    transform: rotateY(180deg);
+  }
+  
+  .card .back {
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
