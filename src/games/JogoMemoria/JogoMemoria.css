@@ -1,49 +1,155 @@
 
 .jogo_memoria {
-    text-align: center;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to top right,#0468BF, #0487D9, #80C7F2);
+
+  h1 {
+    font-size: 40px;
+    padding-bottom: 40px;
   }
-  
+}
+
+/*Estilização do container do "jogo finalizado"*/
+
+.jogo_finalizado_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.jogo_finalizado_info {
+  display: flex;
+  background: var(--cor-branca);
+  padding: 20px 60px;
+  border-radius: 60px;
+  border: 7px solid var(--cor-laranja);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+
+  h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--cor-letras);
+    margin: 14px;
+    text-transform: uppercase;
+  }
+
+  button {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  background-color: var(--cor-laranja);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #f2d69e;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card_grid_jogo {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 15px;
+  justify-content: center;
+
+  img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+  }
+}
+
+@media(max-width: 576px) {
+  .jogo_finalizado_info {
+    padding: 10px 50px;
+
+    h2 {
+      font-size: 50px;
+    }
+
+    button  {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
+@media (min-width: 402px ) and (max-width: 452px) {
   .card_grid_jogo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
-    justify-items: center;
+    grid-template-columns: repeat(3, 100px);
   }
-  
-  .card {
-    width: 100px;
-    height: 100px;
-    perspective: 1000px;
-    cursor: pointer;
+
+  .jogo_finalizado_info {
+    padding: 8px 36px;
+
+    h2 {
+      font-size: 40px;
+    }
+
+    button  {
+      width: 60px;
+      height: 60px;
+    }
   }
-  
-  .card.flipped .front {
-    transform: rotateY(0);
+}
+
+
+@media (min-width: 336px) and (max-width: 398px) {
+  .card_grid_jogo {
+    grid-template-columns: repeat(2, 100px);
   }
-  
-  .card.flipped .back {
-    transform: rotateY(180deg);
+
+  .jogo_finalizado_info {
+    padding: 6px 20px;
+
+    h2 {
+      font-size: 30px;
+    }
+
+    button  {
+      width: 44px;
+      height: 44px;
+    }
   }
-  
-  .card .front,
-  .card .back {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    position: absolute;
-    backface-visibility: hidden;
-    transition: transform 0.3s;
-  }
-  
-  .card .front {
-    background-color: #fff;
-    transform: rotateY(180deg);
-  }
-  
-  .card .back {
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+}
+

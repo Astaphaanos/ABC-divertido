@@ -1,4 +1,4 @@
-import { FaBars, FaSearch} from 'react-icons/fa';
+import { FaBars} from 'react-icons/fa';
 import './Header.css';
 import { useState } from 'react';
 import { Link } from 'react-router';
@@ -32,11 +32,6 @@ const Header = () => {
                             <Link to="/conheca-mais">Conheça Mais</Link>
                         </li>
                     </ul>
-                </div>
-
-                <div className='nav-search'> 
-                    <input type='search' placeholder='O que você procura?'/>
-                    <FaSearch size={16} color="gray"/>
                 </div>
             </nav>
         </header>
