@@ -1,0 +1,120 @@
+
+/*Container do Jogo*/
+.jogo-formar-palavras {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Imagem*/
+.imagem-palavra {
+    width: 340px;
+}
+
+/*Letras embaralhadas*/
+.letras-container {
+    padding: 20px;
+
+    .btn-letra {
+        padding: 30px;
+        border-radius: 20px;
+        border: none;
+        margin-right: 10px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+/*Container da Resposta que o usuário digitou*/
+.resposta-container {
+    padding: 20px;
+    display: flex;
+    font-size: 28px;
+
+    h3 {
+        margin-right: 10px;
+    }
+
+    /*Botão de apagar*/
+    .botao-apagar {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding-left: 30px;
+    }
+}
+
+/*Botão de Verificar*/
+.botao-verificar {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: green;
+    border: none;
+    border-radius: 20px;
+    color: var(--cor-branca);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/*Container de Parabéns*/
+.parabens-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-size: 46px;
+        color: var(--cor-branca);
+    }
+
+    button {
+        padding: 20px 40px;
+        margin-top: 30px;
+        color: var(--cor-branca);
+        font-size: 18px;
+        font-weight: 700;
+        background-color: var(--cor-laranja);
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 316px) and (max-width: 426px) {
+    .imagem-palavra {
+        width: 280px;
+    }
+
+    .letras-container .btn-letra {
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    .resposta-container h3, .letras-resposta {
+        font-size: 24px;
+    }
+
+    .parabens-container {
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        button {
+            padding: 18px 38px;
+            font-size: 16px
+        }
+    }  
+
+    .botao-verificar {
+        padding: 10px 28px;
+        font-size: 16px;
+    }
+}

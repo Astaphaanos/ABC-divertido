@@ -23,6 +23,7 @@ const games = [
         title: "Forme as palavras",
         description: "Complete as palavras com as letras corretas.",
         image: "",
+        route: 'forme-palavras'
       },
 ]
 
