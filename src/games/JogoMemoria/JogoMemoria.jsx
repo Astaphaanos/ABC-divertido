@@ -113,7 +113,7 @@ const JogoMemoria = () => {
             onClick={() => lidarEscolhar(card)}
           >
             <img
-              src={card.matched || card === primeiraEscolha || card === segundaEscolha ? card.src : '/images/back.png'}
+              src={card.matched || card === primeiraEscolha || card === segundaEscolha ? card.src : '/images/jogo-memoria/back-card.png'}
               alt="card" 
               className="card-image"/>
           </div>

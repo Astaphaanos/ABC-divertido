@@ -30,25 +30,30 @@ const JogoFormarPalavras  = () => {
     const [letras, setLetras] = useState([]);
     const [resposta, setResposta] = useState("");
     const [jogoFinalizado, setJogoFinalizado] = useState(false);
+    const [botoesAtivos, setBotoesAtivos] = useState([]);
   
     const palavraAtual = palavras[indexPalavra];
     
     // Embaralhar as letras e reiniciar a resposta ao trocar de palavra
     useEffect(() => {
+      if (!palavraAtual || !palavraAtual.palavra) return; // Verificar se palavraAtual existe
       const letrasEmbaralhadas = palavraAtual.palavra
         .split("")
         .sort(() => Math.random() - 0.5);
+    
       setLetras(letrasEmbaralhadas);
       setResposta("");
-    }, [indexPalavra]);
+      setBotoesAtivos(letrasEmbaralhadas.map((_, i) => i)); // Ativar todos os botões
+    }, [indexPalavra, palavraAtual]); // Inclua palavraAtual como dependência
     
      // Adicionar letra clicada
-    const handleLetraClick = (letra) => {
+    const handleLetraClick = (letra, index) => {
         if (
             resposta.split("").filter((l) => l === letra).length <
             letras.filter((l) => l === letra).length
           ) {
             setResposta((prev) => prev + letra);
+            setBotoesAtivos((prev) => prev.filter((i) => i !== index)); // Desativar botão
           }
         };
         
@@ -61,15 +66,22 @@ const JogoFormarPalavras  = () => {
           setJogoFinalizado(true);
         }
       } else {
-        alert("Tente novamente!");
+        alert("Algo está errado... Tente novamente!");
       }
     };
 
     // Apagar a última letra
     const apagarLetra = () => {
         if (resposta.length > 0) {
-            setResposta((prev) => prev.slice(0, -1));
+          const ultimaLetra = resposta.slice(-1);
+          const indexParaReativar = letras.findIndex(
+            (l, i) => l === ultimaLetra && !botoesAtivos.includes(i)
+          );
+          if (indexParaReativar !== -1) {
+            setBotoesAtivos((prev) => [...prev, indexParaReativar]); // Reativar botão
           }
+          setResposta((prev) => prev.slice(0, -1)); // Remover última letra
+        }
     };
     
     //Reinicia o Jogo
@@ -95,7 +107,8 @@ const JogoFormarPalavras  = () => {
             {letras.map((letra, index) => (
               <button key={index}
                className="btn-letra" 
-               onClick={() => handleLetraClick(letra)}
+               onClick={() => handleLetraClick(letra, index)} 
+               disabled={!botoesAtivos.includes(index)} // Desativar botão se inativo
                >
                 {letra}
               </button>

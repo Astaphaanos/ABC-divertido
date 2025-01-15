@@ -1,0 +1,45 @@
+#jogo-formas-geometricas {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  #forma-atual {
+    margin: 20px 0;
+  }
+  
+  #opcoes-formas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .forma-opcao {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .forma-opcao:hover {
+    background-color: #e0e0e0;
+  }
+  
+  #feedback {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+  
+  #proxima-pergunta {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+  }
+  

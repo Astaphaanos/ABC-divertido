@@ -65,6 +65,18 @@
         color: #fff;
         cursor: pointer;
     }
+
+    .image-container {
+        background-color: white; /* Fundo branco */
+        display: inline-block;   /* Adapta o tamanho ao conteúdo */
+        padding: 38px;           /* Espaçamento interno ao redor da imagem */
+        border-radius: 50%;   
+
+        img {
+            display: block;
+            width: 150px;
+        }
+    }
 }
 
 @media (max-width: 952px) {

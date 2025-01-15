@@ -6,6 +6,7 @@ import HomePage from './routes/HomePage/HomePage';
 import SobrePage from './routes/SobrePage/SobrePage';
 import JogoMemoria from './games/JogoMemoria/JogoMemoria';
 import FormePalavras from './games/FormePalavras/FormePalavras';
+import JogoGeometrico from './games/JogoGeometrico/JogoGeometrico';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/conheca-mais" element={<SobrePage/>}/>
         <Route path='/jogo-memoria' element={<JogoMemoria/>}/>
         <Route path='/forme-palavras' element={<FormePalavras/>}/>
+        <Route path='/formas-geometricas' element={<JogoGeometrico/>}/>
       </Routes>
       <Footer/>
     </Router>

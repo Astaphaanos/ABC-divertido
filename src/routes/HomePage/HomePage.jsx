@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 const games = [
     {
         id: 1,
-        title: "Qual o nome da imagem?",
-        description: "Arraste as letras para combinar com as imagens",
+        title: "Encaixe as formas geométricas",
+        description: "Arraste cada forma geométrica para o contorno correspondente!",
         image: '',
-        route: ''
+        route: 'formas-geometricas'
     },
 
     {
         id: 2,
         title: "Joga da memória dos bichinhos",
         description: "Combine as cartas para encontrar as palavras corretas",
-        image: '',
+        image: '/images/jogo-memoria/back-memoria.png',
         route: 'jogo-memoria'
     },
 
@@ -22,7 +22,7 @@ const games = [
         id: 3,
         title: "Forme as palavras",
         description: "Complete as palavras com as letras corretas.",
-        image: "",
+        image: "/images/formar-palavras/back-palavras.png",
         route: 'forme-palavras'
       },
 ]
@@ -40,7 +40,9 @@ const HomePage = () => {
                     <div className='games_home_section'>
                         {games.map((game) =>(
                             <div key={game.id} className='games_cards'>
-                                <img src="https://via.placeholder.com/300x200" alt="Placeholder" />
+                                <div className='image-container'>
+                                    <img src={game.image} alt=""/>
+                                </div>
                                 <h3>{game.title}</h3>
                                 <p>{game.description}</p>
                                 <Link to={game.route}>

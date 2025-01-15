@@ -5,11 +5,13 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(to top right,#0468BF, #0487D9, #80C7F2);
+  background: linear-gradient(to top,#011F7A, #0A2B8C, #2A51C9);
 
   h1 {
     font-size: 40px;
     padding-bottom: 40px;
+    color: var(--cor-branca);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 }
 
