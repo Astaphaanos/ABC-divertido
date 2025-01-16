@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const games = [
     {
         id: 1,
-        title: "Encaixe as formas geométricas",
-        description: "Arraste cada forma geométrica para o contorno correspondente!",
-        image: '',
+        title: "Qual é a forma geométrica",
+        description: "Descubra qual a forma geométrica mostrada",
+        image: '/images/formas-geometricas/estrela.png',
         route: 'formas-geometricas'
     },
 
