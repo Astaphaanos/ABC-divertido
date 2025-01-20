@@ -7,6 +7,7 @@ import SobrePage from './routes/SobrePage/SobrePage';
 import JogoMemoria from './games/JogoMemoria/JogoMemoria';
 import FormePalavras from './games/FormePalavras/FormePalavras';
 import JogoGeometrico from './games/JogoGeometrico/JogoGeometrico';
+import CombineCores from './games/CombineCores/CombineCores';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/jogo-memoria' element={<JogoMemoria/>}/>
         <Route path='/forme-palavras' element={<FormePalavras/>}/>
         <Route path='/formas-geometricas' element={<JogoGeometrico/>}/>
+        <Route path='/combine-cores' element={<CombineCores/>}/>
       </Routes>
       <Footer/>
     </Router>

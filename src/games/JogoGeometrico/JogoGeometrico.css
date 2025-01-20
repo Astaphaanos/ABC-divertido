@@ -38,3 +38,36 @@
     }
   }
 }
+
+.mensagem_fim_jogo {
+  h2 {
+    font-size: 40px;
+    padding: 10px;
+  }
+  
+  .btn-reiniciar {
+    padding: 12px 40px;
+    border: none;
+    background-color: var(--cor-laranja);
+    font-size: 18px;
+    color: var(--cor-branca);
+    font-weight: 700;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 556px) {
+  .opcoes_formas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;   
+  }
+}
+
+@media (min-width: 330px) {
+  .jogo_formas_container h1 {
+    font-size: 36px;
+  }
+}

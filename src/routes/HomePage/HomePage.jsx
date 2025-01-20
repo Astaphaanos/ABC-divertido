@@ -25,6 +25,15 @@ const games = [
         image: "/images/formar-palavras/back-palavras.png",
         route: 'forme-palavras'
       },
+
+
+      {
+        id: 4,
+        title: "Combine as Cores",
+        description: "Coloque cada cor no balde correspondente",
+        image: "",
+        route: 'combine-cores'
+      },
 ]
 
 const HomePage = () => {

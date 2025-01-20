@@ -11,6 +11,8 @@ const formas = [
 const JogoFormasGeometricas = () => {
     const [formaAtual, setFormaAtual] = useState(null);
     const [pontuacao, setPontuacao] = useState(0);
+    const [quantidadesTentativas, setQuantidadesTentativas] = useState(0)
+    const [jogoFinalizado, setJogoFinalizado] = useState(false)
 
   // Inicializa o jogo com uma forma aleatória
   useEffect(() => {
@@ -25,12 +27,25 @@ const JogoFormasGeometricas = () => {
 
       // Função para lidar com o clique do botão
       const lidarEscolha = (nomeForma) => {
+        setQuantidadesTentativas((prev) => prev + 1);
+
         if (nomeForma === formaAtual.nome) {
-            alert('Parabéns! Você Acertou!');
             setPontuacao((prev) => prev + 1);
         } else {
             alert("Tente Novamente!");
         }
+        if (quantidadesTentativas + 1 === 8) {
+          setJogoFinalizado(true);
+        } else {
+          gerarFormaAleatoria();
+        }
+      }
+
+      // Reiniciar o Jogo
+      const reiniciarJogo = () => {
+        setPontuacao(0)
+        setQuantidadesTentativas(0)
+        setJogoFinalizado(false)
         gerarFormaAleatoria();
       }
 
@@ -39,28 +54,43 @@ const JogoFormasGeometricas = () => {
       <h1>Jogo das Formas Geométricas</h1>
       <p>Pontuação: {pontuacao}</p>
       
-      {formaAtual && (
-        <div className="forma_atual">
-          <img
-            src={formaAtual.imagem}
-            alt={formaAtual.nome}
-            className="imagem-forma"
-          />
-          <p>Qual é a forma acima?</p>
-        </div>
-      )}
-
-      <div className="opcoes_formas">
-        {formas.map((forma, index) => (
-          <button
-            key={index}
-            onClick={() => lidarEscolha(forma.nome)}
-            className="btn-forma"
-          >
-            <img src={forma.imagem} alt={forma.nome} className="imagem-opcao" />
+     {jogoFinalizado ? (
+        <div className="mensagem_fim_jogo">
+          <h2>Parabéns! Você completou o jogo!</h2>
+          <button onClick={reiniciarJogo} className="btn-reiniciar">
+            Jogar Novamente
           </button>
-        ))}
-      </div>
+        </div>
+      ) : (
+        <>
+          {formaAtual && (
+            <div className="forma_atual">
+              <img
+                src={formaAtual.imagem}
+                alt={formaAtual.nome}
+                className="imagem-forma"
+              />
+              <p>Qual é a forma acima?</p>
+            </div>
+          )}
+
+          <div className="opcoes_formas">
+            {formas.map((forma, index) => (
+              <button
+                key={index}
+                onClick={() => lidarEscolha(forma.nome)}
+                className="btn-forma"
+              >
+                <img
+                  src={forma.imagem}
+                  alt={forma.nome}
+                  className="imagem-opcao"
+                />
+              </button>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };
