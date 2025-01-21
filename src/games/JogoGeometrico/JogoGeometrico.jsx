@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./JogoGeometrico.css";
 
 const formas = [
-  { nome: "Círculo", imagem: "/images/formas-geometricas/circulo.png" },
+  { nome: "Círculo", imagem: "https://img.icons8.com/ios-filled/150/unchecked-circle.png"}, //! colocar cor nisso pq tá preto
   { nome: "Triângulo", imagem: "/images/formas-geometricas/triangulo.png" },
   { nome: "Quadrado", imagem: "/images/formas-geometricas/quadrado.png" },
   { nome: "Estrela", imagem: "/images/formas-geometricas/estrela.png" },
@@ -68,7 +68,7 @@ const JogoFormasGeometricas = () => {
               <img
                 src={formaAtual.imagem}
                 alt={formaAtual.nome}
-                className="imagem-forma"
+                className="imagem-forma" 
               />
               <p>Qual é a forma acima?</p>
             </div>

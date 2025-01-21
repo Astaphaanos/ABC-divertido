@@ -1,10 +1,98 @@
+import { useState } from 'react';
 import './CombineCores.css';
 
-    
+//Lista de imagens
+const perguntas = [
+    {id:1, nome: 'maçã', cor: 'Vermelho', imagem: 'https://img.icons8.com/color/96/whole-apple.png'},
+    {id:2, nome: 'cenoura', cor: 'Laranja', imagem: 'https://img.icons8.com/emoji/96/carrot-emoji.png'},
+    {id:3, nome: 'flamingo', cor: 'Rosa', imagem: 'https://img.icons8.com/color/96/flamingo.png'},
+    {id:4, nome: 'banana', cor: 'Amarelo', imagem: 'https://img.icons8.com/color/96/banana.png'},
+    {id:5, nome: 'ganso', cor: 'Branco', imagem: 'https://img.icons8.com/color/96/goose.png'},
+    {id:6, nome: 'pantera', cor: 'Preto', imagem: 'https://img.icons8.com/color/96/black-jaguar.png'},
+    {id:7, nome: 'urso', cor: 'Marrom', imagem: 'https://img.icons8.com/color/96/bear-full-body.png'},
+    {id:8, nome: 'cobra', cor: 'Verde', imagem: 'https://img.icons8.com/color/96/snake.png'},
+    {id:9, nome: 'cavalo', cor: 'Cinza', imagem: 'https://img.icons8.com/color/96/horse.png'},
+];
+
+const cores = [
+    {nome: "Vermelho", estilo: {color: 'red'}},
+    {nome: "Laranja", estilo: {color: 'orange'}},
+    {nome: "Rosa", estilo: {color: 'pink'}},
+    {nome: "Amarelo", estilo: {color: 'yellow'}},
+    {nome: "Branco", estilo: {color: 'white'}},
+    {nome: "Preto", estilo: {color: 'black'}},
+    {nome: "Marrom", estilo: {color: 'brown'}},
+    {nome: "Verde", estilo: {color: 'green'}},
+    {nome: "Cinza", estilo: {color: 'gray'}},
+]
 
 const CombineCores = () => {
+    const [indiceAtual, setIndiceAtual] = useState(0);
+    const [mensagem, setMensagem] = useState('');
+    const [pontuacao, setPontuacao] = useState(0);
+    const [jogoFinalizado, setJogoFinalizado] = useState(false);
+
+    const perguntaAtual = perguntas[indiceAtual];
+
+    const lidarResposta = (corSelecionada) => {
+        if (corSelecionada === perguntaAtual.cor) {
+            setMensagem('Muito Bem!');
+            setPontuacao((prev) => prev + 1);
+
+            // Próxima pergunta ou finaliza o jogo
+            const proximoIndice = indiceAtual + 1;
+              if (proximoIndice < perguntas.length) {
+                setIndiceAtual(proximoIndice);
+              } else {
+                setJogoFinalizado(true);
+              }
+        } else {
+            setMensagem("Tente Novamente")
+        }
+    };
+    
+    const reiniciarJogo = () => {
+        setJogoFinalizado(false);
+        setMensagem('');
+        setIndiceAtual(0)
+        setPontuacao(0)
+    };
+
     return(
-        <div></div>
+        <div className='cores_jogo_container'>
+            {!jogoFinalizado ? (
+        <>
+          <h1>Descubra a Cor</h1>
+          <div className="pergunta_container">
+            <img src={perguntaAtual.imagem} alt={perguntaAtual.nome} className="imagem_pergunta" />
+            <p>Qual é a cor do(a) {perguntaAtual.nome}?</p>
+          </div>
+
+          <div className="opcoes_container">
+            {cores.sort(() => Math.random() - 0.5).map((cor) => (
+              <button
+                key={cor.nome}
+                style={cor.estilo}
+                onClick={() => lidarResposta(cor.nome)}
+                className="btn_opcoes"
+              >
+                {cor.nome}
+              </button>
+            ))}
+          </div>
+
+          {mensagem && <div className="mensagem_container">{mensagem}</div>}
+        </>
+      ) : (
+        <div className="pontuacao_container">
+          <h2>Parabéns!</h2>
+          <p>Você acertou {pontuacao} de {perguntas.length}!</p>
+          <button onClick={reiniciarJogo} className="btn-reiniciar">
+            Jogar Novamente
+          </button>
+        </div>
+      )}
+    </div>
     );
 }
 

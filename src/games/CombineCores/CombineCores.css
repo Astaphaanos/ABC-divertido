@@ -1,0 +1,129 @@
+
+.cores_jogo_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    h1 {
+        font-size: 42px;
+        padding: 30px;
+    }
+}
+
+.pergunta_container {
+    text-align: center;
+
+    .imagem_pergunta {
+        width: 160px;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 20px;
+    }
+}
+
+.opcoes_container {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    row-gap: 10px;
+
+    .btn_opcoes {
+        padding: 20px 30px;
+        margin-left: 10px;
+        background-color: rgba(245, 245, 245, 0.596);
+        border: none;
+        border-radius: 20px;
+        font-size: 30px;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(245, 245, 245, 0.712);
+        }
+    }
+}
+
+.mensagem_container {
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+.pontuacao_container {
+    text-align: center;
+    
+    h2 {
+        font-size: 46px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 24px;
+        padding: 20px;
+        font-weight: 600;
+    }
+
+    .btn-reiniciar {
+        padding: 20px 40px;
+        background-color: var(--cor-laranja);
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        color: var(--cor-branca);
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 611px) {
+    .opcoes_container  {
+        grid-template-columns: repeat(2, 200px);
+
+        .btn_opcoes {
+            font-size: 26px;
+        }
+    }
+}
+
+@media (max-width: 417px) {
+    .cores_jogo_container h1 {
+        font-size: 38px;
+    }
+
+    .opcoes_container  {
+        grid-template-columns: repeat(2, 160px);
+
+        .btn_opcoes {
+            font-size: 24px;
+        }
+    }
+
+    .pergunta_container .imagem_pergunta {
+        width: 140px;
+    }
+}
+
+
+@media (max-width: 349px) {
+    .cores_jogo_container h1 {
+        font-size: 36px;
+    }
+
+    .opcoes_container  {
+        grid-template-columns: repeat(1, 160px);
+
+        .btn_opcoes {
+            font-size: 22px;
+        }
+    }
+
+    .pergunta_container .imagem_pergunta {
+        width: 120px;
+    }
+}

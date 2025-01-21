@@ -30,8 +30,8 @@ const games = [
       {
         id: 4,
         title: "Combine as Cores",
-        description: "Coloque cada cor no balde correspondente",
-        image: "",
+        description: "Responda com a cor correta cada fruta e animal que aparecer",
+        image: "https://img.icons8.com/matisse/100/paint-palette.png",
         route: 'combine-cores'
       },
 ]
