@@ -5,23 +5,23 @@ import "./FormePalavras.css";
 const palavras = [
   {
     palavra: "Gato",
-    imagem: "/images/formar-palavras/gato.png",
+    imagem: "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/300/external-cat-animal-flaticons-lineal-color-flat-icons-3.png",
   },
   {
     palavra: "Casa",
-    imagem: "/images/formar-palavras/casa.png",
+    imagem: "https://img.icons8.com/external-ddara-lineal-color-ddara/300/external-house-real-estate-ddara-lineal-color-ddara.png",
   },
   {
     palavra: "Carro",
-    imagem: "/images/formar-palavras/carro.png",
+    imagem: "https://img.icons8.com/external-konkapp-outline-color-konkapp/400/external-car-transportation-konkapp-outline-color-konkapp.png",
   },
   {
     palavra: "Bola",
-    imagem: "/images/formar-palavras/bola.png",
+    imagem: "https://img.icons8.com/plasticine/700/football2.png",
   },
   {
     palavra: "Árvore",
-    imagem: "/images/formar-palavras/arvore.png",
+    imagem: "https://img.icons8.com/external-justicon-lineal-color-justicon/500/external-tree-tree-justicon-lineal-color-justicon-8.png",
   },
 ];
 

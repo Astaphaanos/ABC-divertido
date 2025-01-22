@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import "./JogoGeometrico.css";
 
 const formas = [
-  { nome: "Círculo", imagem: "https://img.icons8.com/ios-filled/150/unchecked-circle.png"}, //! colocar cor nisso pq tá preto
-  { nome: "Triângulo", imagem: "/images/formas-geometricas/triangulo.png" },
-  { nome: "Quadrado", imagem: "/images/formas-geometricas/quadrado.png" },
-  { nome: "Estrela", imagem: "/images/formas-geometricas/estrela.png" },
+  { nome: "Círculo", imagem: "https://img.icons8.com/sf-regular/400/FA5252/circled.png"},
+  { nome: "Triângulo", imagem: "https://img.icons8.com/windows/400/FAB005/triangle-stroked.png" },
+  { nome: "Quadrado", imagem: "https://img.icons8.com/windows/400/228BE6/maximize-button.png" },
+  { nome: "Estrela", imagem: "https://img.icons8.com/windows/400/7950F2/star--v1.png" },
 ];
 
 const JogoFormasGeometricas = () => {

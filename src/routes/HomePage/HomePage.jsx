@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const games = [
     {
         id: 1,
-        title: "Qual é a forma geométrica",
+        title: "Qual é a forma geométrica?",
         description: "Descubra qual a forma geométrica mostrada",
-        image: '/images/formas-geometricas/estrela.png',
+        image: 'https://img.icons8.com/pastel-glyph/400/7950F2/falling-star--v2.png',
         route: 'formas-geometricas'
     },
 
@@ -14,7 +14,7 @@ const games = [
         id: 2,
         title: "Joga da memória dos bichinhos",
         description: "Combine as cartas para encontrar as palavras corretas",
-        image: '/images/jogo-memoria/back-memoria.png',
+        image: 'https://img.icons8.com/color/400/group-of-animals.png',
         route: 'jogo-memoria'
     },
 
@@ -22,7 +22,7 @@ const games = [
         id: 3,
         title: "Forme as palavras",
         description: "Complete as palavras com as letras corretas.",
-        image: "/images/formar-palavras/back-palavras.png",
+        image: "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/400/external-dinosaur-museum-flaticons-lineal-color-flat-icons-2.png",
         route: 'forme-palavras'
       },
 
@@ -31,7 +31,7 @@ const games = [
         id: 4,
         title: "Combine as Cores",
         description: "Responda com a cor correta cada fruta e animal que aparecer",
-        image: "https://img.icons8.com/matisse/100/paint-palette.png",
+        image: "https://img.icons8.com/office/400/paint-palette.png",
         route: 'combine-cores'
       },
 ]

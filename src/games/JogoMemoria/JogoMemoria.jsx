@@ -4,14 +4,14 @@ import confetti from 'canvas-confetti';
 import { FaRedo } from 'react-icons/fa';
 
 const images = [
-    { id: 1, src:'/images/jogo-memoria/cao.png', matched: false },
-    { id: 2, src:'/images/jogo-memoria/cavalo.png', matched: false },
-    { id: 3, src:'/images/jogo-memoria/dinossauro.png', matched: false },
-    { id: 4, src:'/images/jogo-memoria/gato.png', matched: false },
-    { id: 5, src:'/images/jogo-memoria/leao.png', matched: false },
-    { id: 6, src:'/images/jogo-memoria/passaro.png', matched: false },
-    { id: 7, src:'/images/jogo-memoria/peixe.png', matched: false },
-    { id: 9, src:'/images/jogo-memoria/vaca.png', matched: false },
+    { id: 1, src:'https://img.icons8.com/plasticine/400/dog.png', matched: false },
+    { id: 2, src:'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/400/external-horse-animal-flaticons-lineal-color-flat-icons-3.png', matched: false },
+    { id: 3, src:'https://img.icons8.com/external-justicon-lineal-color-justicon/400/external-panda-animal-justicon-lineal-color-justicon.png', matched: false },
+    { id: 4, src:'https://img.icons8.com/external-justicon-lineal-color-justicon/400/external-cat-dog-and-cat-justicon-lineal-color-justicon-11.png', matched: false },
+    { id: 5, src:'https://img.icons8.com/external-justicon-lineal-color-justicon/400/external-lion-animal-justicon-lineal-color-justicon.png', matched: false },
+    { id: 6, src:'https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/400/external-bird-spring-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png', matched: false },
+    { id: 7, src:'https://img.icons8.com/external-flaticons-flat-flat-icons/400/external-fish-prehistoric-flaticons-flat-flat-icons-2.png', matched: false },
+    { id: 9, src:'https://img.icons8.com/external-flaticons-lineal-color-flat-icons/400/external-cow-animal-flaticons-lineal-color-flat-icons-3.png', matched: false },
 ];
 
 const JogoMemoria = () => {
@@ -113,7 +113,7 @@ const JogoMemoria = () => {
             onClick={() => lidarEscolhar(card)}
           >
             <img
-              src={card.matched || card === primeiraEscolha || card === segundaEscolha ? card.src : '/images/jogo-memoria/back-card.png'}
+              src={card.matched || card === primeiraEscolha || card === segundaEscolha ? card.src : 'https://img.icons8.com/glyph-neue/400/dog-footprint.png'}
               alt="card" 
               className="card-image"/>
           </div>
