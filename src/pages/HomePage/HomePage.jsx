@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 const games = [
     {
         id: 1,
-        title: "Qual é a forma geométrica?",
-        description: "Descubra qual a forma geométrica mostrada",
+        title: "Aventura Geométrica!",
+        description: "Reconheça as formas e escolha a certa!",
         image: 'https://img.icons8.com/pastel-glyph/400/7950F2/falling-star--v2.png',
         route: 'formas-geometricas',
         cor: '#B2C8FF'
@@ -13,8 +13,8 @@ const games = [
 
     {
         id: 2,
-        title: "Joga da memória dos bichinhos",
-        description: "Combine as cartas para encontrar as palavras corretas",
+        title: "Jogo da memória dos bichinhos",
+        description: "Encontre os pares de bichinhos e teste sua memória! Quem consegue lembrar mais rápido?",
         image: 'https://img.icons8.com/color/400/group-of-animals.png',
         route: 'jogo-memoria',
         cor: '#E59F34'
@@ -22,8 +22,8 @@ const games = [
 
     {
         id: 3,
-        title: "Forme as palavras",
-        description: "Complete as palavras com as letras corretas.",
+        title: "Desafio do ABC",
+        description: "Forme palavras juntando as letras corretas!",
         image: "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/400/external-dinosaur-museum-flaticons-lineal-color-flat-icons-2.png",
         route: 'forme-palavras',
         cor: '#F2A2B8'
@@ -32,8 +32,8 @@ const games = [
 
       {
         id: 4,
-        title: "Combine as Cores",
-        description: "Responda com a cor correta cada fruta e animal que aparecer",
+        title: "Descubra a cor!",
+        description: "Observe as imagens e diga qual é a cor certa!",
         image: "https://img.icons8.com/office/400/paint-palette.png",
         route: 'combine-cores',
         cor: '#F2454F'
