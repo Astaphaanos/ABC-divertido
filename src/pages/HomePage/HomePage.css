@@ -78,10 +78,7 @@
         cursor: pointer;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease; 
-
-        a {
-            color: var(--cor-branca);
-        }
+        color: var(--cor-branca);
 
         &:hover{
             background-color: var(--cor-btn-hover); /* Muda para laranja no hover */
@@ -190,3 +187,16 @@
     }
 
 }
+
+@media (max-width: 452px) {
+    .home_banner_info {
+        width: 120%;
+    }
+}
+
+@media (max-width: 396px) {
+    .home_banner_info {
+        width: 140%;
+    }
+}
+

@@ -3,14 +3,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--cor-branca);
+    background-color: var(--cor-branca-acinzentada);
     padding: 10px;
-    border-top: 2px solid var(--cor-letras);
+    border-top: 3px solid var(--cor-branca-acinzentada);
 
     p {
         font-size: 18px;
         color: var(--cor-letras);
-        font-weight: 600;
+        font-weight: 700;
     }
 }
 

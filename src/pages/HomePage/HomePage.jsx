@@ -1,4 +1,5 @@
 import './HomePage.css';
+import { useNavigate } from "react-router-dom";
 
 const games = [
     {
@@ -40,6 +41,8 @@ const games = [
 ]
 
 const HomePage = () => {
+    const navigate = useNavigate();
+
     return (
         <div className='home_container'>
             <section className='home_section'>
@@ -57,8 +60,8 @@ const HomePage = () => {
                                 </div>
                                 <h3>{game.title}</h3>
                                 <p>{game.description}</p>
-                                <button type='button'>
-                                    <a href={game.route} target='-blank'>Jogar Agora</a>
+                                <button type='button' onClick={() => navigate(game.route)}>
+                                    Jogar Agora
                                 </button>
                             </div>
                         ))}

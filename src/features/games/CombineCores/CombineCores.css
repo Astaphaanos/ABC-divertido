@@ -5,9 +5,9 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('/images/fundo-cores.jpg');
+    background-image: url('/src/assets/fundo-cores.jpg');
     background-position: center;
-    background-size: cover;
+    background-size: 120px;
     
     h1 {
         font-size: 42px;

@@ -93,9 +93,11 @@ nav {
             display: none;
             flex-direction: column;
             position: absolute;
-            top: 60px;
-            right: 20px;
-            background-color: #fff;
+            top: 200px;
+            left: 0;
+            margin-left: 80px;
+            background-color: var(--cor-fundo);
+            color: var(--cor-letras);
             border: 1px solid #44444444;
             padding: 10px;
             z-index: 1000;
@@ -107,6 +109,7 @@ nav {
             li {
                 border-bottom: 1px solid black;
                 padding: 20px;
+                width: 100%;
             }
     }
 
@@ -117,9 +120,23 @@ nav {
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1005px) {
+    .menu-list {
+        left: -70px;
+    }
+}
 
-    .nav-logo {
-        display: none;
+@media (max-width: 631px) {
+    
+    .nav-logo img{
+        width: 340px;
+    }
+}
+
+
+@media (max-width: 421px) {
+
+    .nav-logo img{
+        width: 300px;
     }
 }

@@ -6,10 +6,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('/images/fundo-geometrico.jpg');
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(to bottom, #D4F1F9, #FEEA8D);
 
   h1 {
     font-size: 50px;
@@ -24,14 +21,11 @@
   }
 }
 
-
-
 .forma_atual  .imagem-forma {
   width: 180px;
 }
 
 .opcoes_formas {
-
   .btn-forma {
     padding: 14px;
     margin-left: 10px;
@@ -69,11 +63,35 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 20px;   
+    padding-right: 8px;
   }
 }
 
-@media (min-width: 330px) {
-  .jogo_formas_container h1 {
-    font-size: 36px;
+@media (max-width: 332px) {
+  .jogo_formas_container {
+    height: auto;
+
+    h1 {
+      font-size: 38px;
+    }
+  }
+
+  .opcoes_formas {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;   
+    padding-bottom: 20px;
+
+    .btn-forma {
+      padding: 10px;
+    }
+
+    img {
+      width: 0px;
+    }
+  }
+
+  .forma_atual  .imagem-forma {
+    width: 160px;
   }
 }
