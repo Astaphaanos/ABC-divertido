@@ -5,6 +5,9 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-image: url('/images/fundo-cores.jpg');
+    background-position: center;
+    background-size: cover;
     
     h1 {
         font-size: 42px;
@@ -35,7 +38,7 @@
     .btn_opcoes {
         padding: 20px 30px;
         margin-left: 10px;
-        background-color: rgba(245, 245, 245, 0.596);
+        background-color: #aaadaf;
         border: none;
         border-radius: 20px;
         font-size: 30px;
@@ -43,7 +46,7 @@
         cursor: pointer;
 
         &:hover {
-            background-color: rgba(245, 245, 245, 0.712);
+            background-color: rgba(245, 245, 245, 0.822);
         }
     }
 }

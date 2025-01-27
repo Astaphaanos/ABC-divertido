@@ -7,6 +7,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url('/images/fundo-palavras.jpg');
+    background-position: center;
+    background-size: cover;
+
 }
 
 /*Imagem*/
@@ -19,6 +23,8 @@
     padding: 20px;
 
     .btn-letra {
+        background-color: rgb(157, 201, 82);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
         padding: 30px;
         border-radius: 20px;
         border: none;
@@ -70,8 +76,8 @@
 
     h2 {
         font-size: 46px;
-        color: var(--cor-branca);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        color: var(--cor-letras);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.267);
     }
 
     button {

@@ -1,27 +1,33 @@
 .jogo_formas_container {
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-image: url('/images/fundo-geometrico.jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   h1 {
-    font-size: 44px;
-    font-weight: 700;
+    font-size: 50px;
+    font-weight: 800;
     padding: 20px;
   }
 
   p {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     padding: 30px;
   }
 }
 
 
+
 .forma_atual  .imagem-forma {
-  width: 120px;
+  width: 180px;
 }
 
 .opcoes_formas {

@@ -4,18 +4,33 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
   height: 100vh;
-  background: linear-gradient(to top,#011F7A, #0A2B8C, #2A51C9);
+  background-image: url('images/fundo-jogo-memoria.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 
   h1 {
-    font-size: 44px;
+    font-size: 50px;
     padding-bottom: 40px;
-    color: var(--cor-branca);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--cor-laranja);
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.151);
+  }
+
+  :before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.041); /* Cor preta com 30% de opacidade */
+      z-index: 1;
   }
 }
-
-/*Estilização do container do "jogo finalizado"*/
 
 .jogo_finalizado_container {
   position: fixed;
@@ -72,14 +87,16 @@
 }
 
 .card {
+  position: relative; /* Para que o conteúdo fique acima do pseudo-elemento */
+  z-index: 2; /* Para garantir que o conteúdo fique acima do fundo */
   width: 100px;
   height: 100px;
-  background-color: #f2d69e;
+  background-color: #ebc96e;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.603);
   transition: transform 0.2s ease;
   cursor: pointer;
 }

@@ -1,5 +1,4 @@
 import './HomePage.css';
-import { Link } from 'react-router-dom'; 
 
 const games = [
     {
@@ -7,7 +6,8 @@ const games = [
         title: "Qual é a forma geométrica?",
         description: "Descubra qual a forma geométrica mostrada",
         image: 'https://img.icons8.com/pastel-glyph/400/7950F2/falling-star--v2.png',
-        route: 'formas-geometricas'
+        route: 'formas-geometricas',
+        cor: '#B2C8FF'
     },
 
     {
@@ -15,7 +15,8 @@ const games = [
         title: "Joga da memória dos bichinhos",
         description: "Combine as cartas para encontrar as palavras corretas",
         image: 'https://img.icons8.com/color/400/group-of-animals.png',
-        route: 'jogo-memoria'
+        route: 'jogo-memoria',
+        cor: '#E59F34'
     },
 
     {
@@ -23,7 +24,8 @@ const games = [
         title: "Forme as palavras",
         description: "Complete as palavras com as letras corretas.",
         image: "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/400/external-dinosaur-museum-flaticons-lineal-color-flat-icons-2.png",
-        route: 'forme-palavras'
+        route: 'forme-palavras',
+        cor: '#F2A2B8'
       },
 
 
@@ -32,13 +34,14 @@ const games = [
         title: "Combine as Cores",
         description: "Responda com a cor correta cada fruta e animal que aparecer",
         image: "https://img.icons8.com/office/400/paint-palette.png",
-        route: 'combine-cores'
+        route: 'combine-cores',
+        cor: '#F2454F'
       },
 ]
 
 const HomePage = () => {
     return (
-        <div>
+        <div className='home_container'>
             <section className='home_section'>
                 <h1>Olá Amiguinho! Pronto para a diversão?</h1>
 
@@ -49,19 +52,18 @@ const HomePage = () => {
                     <div className='games_home_section'>
                         {games.map((game) =>(
                             <div key={game.id} className='games_cards'>
-                                <div className='image-container'>
-                                    <img src={game.image} alt=""/>
+                                <div className='image-container' style={{backgroundColor: game.cor}}>
+                                    <img src={game.image} alt={game.nome}/>
                                 </div>
                                 <h3>{game.title}</h3>
                                 <p>{game.description}</p>
-                                <Link to={game.route}>
-                                    <button type='button'>Jogar Agora</button>
-                                </Link>
+                                <button type='button'>
+                                    <a href={game.route} target='-blank'>Jogar Agora</a>
+                                </button>
                             </div>
                         ))}
                     </div>
                 </div>
-
             </section>
         </div>
     )

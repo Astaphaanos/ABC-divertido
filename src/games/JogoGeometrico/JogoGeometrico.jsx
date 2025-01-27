@@ -51,46 +51,47 @@ const JogoFormasGeometricas = () => {
 
   return (
     <div className="jogo_formas_container">
-      <h1>Jogo das Formas Geométricas</h1>
-      <p>Pontuação: {pontuacao}</p>
-      
-     {jogoFinalizado ? (
-        <div className="mensagem_fim_jogo">
-          <h2>Parabéns! Você completou o jogo!</h2>
-          <button onClick={reiniciarJogo} className="btn-reiniciar">
-            Jogar Novamente
-          </button>
-        </div>
-      ) : (
-        <>
-          {formaAtual && (
-            <div className="forma_atual">
-              <img
-                src={formaAtual.imagem}
-                alt={formaAtual.nome}
-                className="imagem-forma" 
-              />
-              <p>Qual é a forma acima?</p>
-            </div>
-          )}
-
-          <div className="opcoes_formas">
-            {formas.map((forma, index) => (
-              <button
-                key={index}
-                onClick={() => lidarEscolha(forma.nome)}
-                className="btn-forma"
-              >
-                <img
-                  src={forma.imagem}
-                  alt={forma.nome}
-                  className="imagem-opcao"
-                />
-              </button>
-            ))}
+      <div className="jogo_formas_section">
+        <h1>Jogo das Formas Geométricas</h1>
+        <p>Pontuação: {pontuacao}</p>
+        
+             {jogoFinalizado ? (
+          <div className="mensagem_fim_jogo">
+            <h2>Parabéns! Você completou o jogo!</h2>
+            <button onClick={reiniciarJogo} className="btn-reiniciar">
+              Jogar Novamente
+            </button>
           </div>
-        </>
-      )}
+        ) : (
+          <>
+            {formaAtual && (
+              <div className="forma_atual">
+                <img
+                  src={formaAtual.imagem}
+                  alt={formaAtual.nome}
+                  className="imagem-forma"
+                />
+                <p>Qual é a forma acima?</p>
+              </div>
+            )}
+            <div className="opcoes_formas">
+              {formas.map((forma, index) => (
+                <button
+                  key={index}
+                  onClick={() => lidarEscolha(forma.nome)}
+                  className="btn-forma"
+                >
+                  <img
+                    src={forma.imagem}
+                    alt={forma.nome}
+                    className="imagem-opcao"
+                  />
+                </button>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,9 +1,10 @@
 :root {
-  --cor-fundo: linear-gradient(to bottom, #87CEFA, #4682B4);
-  --cor-secundaria: #0C87F2;
-  --cor-letras: #01091b;
+  --cor-fundo: #A0DBF2;
+  --cor-letras: #000;
   --cor-laranja: #FFD700;
   --cor-branca: #fff;
+  --cor-branca-acinzentada: #f2f2f2;
+  --cor-btn-hover: #FFA500;
 }
 
 
@@ -15,8 +16,11 @@
 
   body {
     width: 100%;
-    background: var(--cor-fundo);
     font-family: "Comic Neue", serif;
+    background-image: url("/images/fundo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   li {

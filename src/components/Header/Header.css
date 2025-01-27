@@ -1,26 +1,36 @@
-
+header {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 nav {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    height: 20vh;
-    background-image: url("/images/background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    justify-content: center;
+    height: 16vh;
 }
 
 .nav-logo {
+    padding: 30px;
+
     img {
-        width: 180px;
+        width: 400px;
+        height: auto;
     }
 }
 
 .nav-links {
+    width: 100%;
+    background-color: var(--cor-fundo);
+    padding: 20px;
+
     ul {
         display: flex;
+        align-items: center;
+        justify-content: center;
 
         a {
             padding-right: 40px;
@@ -31,7 +41,7 @@ nav {
             text-transform: uppercase;
 
             &:hover{
-                color: #FDFDFF; /*mudar depois*/
+                color: var(--cor-branca-acinzentada); /*mudar depois*/
             }
         } 
     }

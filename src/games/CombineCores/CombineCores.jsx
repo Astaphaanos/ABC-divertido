@@ -3,15 +3,15 @@ import './CombineCores.css';
 
 //Lista de imagens
 const perguntas = [
-    {id:1, nome: 'maçã', cor: 'Vermelho', imagem: 'https://img.icons8.com/color/96/whole-apple.png'},
-    {id:2, nome: 'cenoura', cor: 'Laranja', imagem: 'https://img.icons8.com/emoji/96/carrot-emoji.png'},
-    {id:3, nome: 'flamingo', cor: 'Rosa', imagem: 'https://img.icons8.com/color/96/flamingo.png'},
-    {id:4, nome: 'banana', cor: 'Amarelo', imagem: 'https://img.icons8.com/color/96/banana.png'},
-    {id:5, nome: 'ganso', cor: 'Branco', imagem: 'https://img.icons8.com/color/96/goose.png'},
-    {id:6, nome: 'pantera', cor: 'Preto', imagem: 'https://img.icons8.com/color/96/black-jaguar.png'},
-    {id:7, nome: 'urso', cor: 'Marrom', imagem: 'https://img.icons8.com/color/96/bear-full-body.png'},
-    {id:8, nome: 'cobra', cor: 'Verde', imagem: 'https://img.icons8.com/color/96/snake.png'},
-    {id:9, nome: 'cavalo', cor: 'Cinza', imagem: 'https://img.icons8.com/color/96/horse.png'},
+    {id:1, nome: 'maçã', cor: 'Vermelho', imagem: 'https://img.icons8.com/color/150/whole-apple.png'},
+    {id:2, nome: 'cenoura', cor: 'Laranja', imagem: 'https://img.icons8.com/emoji/150/carrot-emoji.png'},
+    {id:3, nome: 'flamingo', cor: 'Rosa', imagem: 'https://img.icons8.com/color/150/flamingo.png'},
+    {id:4, nome: 'banana', cor: 'Amarelo', imagem: 'https://img.icons8.com/color/159/banana.png'},
+    {id:5, nome: 'ganso', cor: 'Branco', imagem: 'https://img.icons8.com/color/150/goose.png'},
+    {id:6, nome: 'pantera', cor: 'Preto', imagem: 'https://img.icons8.com/color/150/black-jaguar.png'},
+    {id:7, nome: 'urso', cor: 'Marrom', imagem: 'https://img.icons8.com/color/150/bear-full-body.png'},
+    {id:8, nome: 'cobra', cor: 'Verde', imagem: 'https://img.icons8.com/color/150/snake.png'},
+    {id:9, nome: 'cavalo', cor: 'Cinza', imagem: 'https://img.icons8.com/color/150/horse.png'},
 ];
 
 const cores = [

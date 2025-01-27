@@ -1,4 +1,3 @@
-import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -12,10 +11,10 @@ import CombineCores from './games/CombineCores/CombineCores';
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
-        <Route path="/" element={<HomePage />}/>
-        <Route path="/conheca-mais" element={<SobrePage/>}/>
+        <Route path="/" element={<><Header/><HomePage/></>}/>
+        <Route path="/conheca-mais" element={<><Header/><SobrePage/></>}/>
+        
         <Route path='/jogo-memoria' element={<JogoMemoria/>}/>
         <Route path='/forme-palavras' element={<FormePalavras/>}/>
         <Route path='/formas-geometricas' element={<JogoGeometrico/>}/>
