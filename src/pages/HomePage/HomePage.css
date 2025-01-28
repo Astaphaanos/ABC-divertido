@@ -1,7 +1,7 @@
 .home_container {
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     background-color: var(--cor-branca-acinzentada);
 }
@@ -15,7 +15,7 @@
 
     h1 {
         font-size: 44px;
-        padding-bottom: 20px;
+        padding: 30px;
         font-weight: 700;
     }
 }
@@ -25,6 +25,7 @@
     border-radius: 30px;
     padding: 30px;
     width: 100%;
+    height: 100vh;
     
     h2 {
         font-size: 34px;
@@ -43,7 +44,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
-    padding-top: 40px;
+    padding-top: 60px;
     width: 100%;
 }
 
@@ -51,6 +52,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     
     h3 {
         margin-top: 14px;

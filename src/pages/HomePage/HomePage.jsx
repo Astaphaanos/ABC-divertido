@@ -13,8 +13,8 @@ const games = [
 
     {
         id: 2,
-        title: "Jogo da memória dos bichinhos",
-        description: "Encontre os pares de bichinhos e teste sua memória! Quem consegue lembrar mais rápido?",
+        title: "Jogo da memória dos bichos",
+        description: "Encontre os pares de bichinhos e teste sua memória!",
         image: 'https://img.icons8.com/color/400/group-of-animals.png',
         route: 'jogo-memoria',
         cor: '#E59F34'

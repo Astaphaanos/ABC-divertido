@@ -1,10 +1,21 @@
 :root {
-  --cor-fundo: #A0DBF2;
+  --cor-fundo: #6EC1E4;
   --cor-letras: #000;
-  --cor-laranja: #FFD700;
+  
   --cor-branca: #fff;
   --cor-branca-acinzentada: #f2f2f2;
-  --cor-btn-hover: #FFA500;
+  
+  --cor-laranja: #FFA500;
+  --cor-btn-hover: #FFD700;
+ 
+
+  --cor-fundo-amarelo: #FFD170;
+  --cor-fundo-amarelo-claro: #FCDF9B;
+
+  --cor-roxo: #DDA0DD;
+  --cor-rosa: #FFB6C1;
+  --cor-verde: #B2F2BB;
+  --cor-vermelho: #FF6F61;
 }
 
 
@@ -16,7 +27,7 @@
 
   body {
     width: 100%;
-    font-family: "Comic Neue", serif;
+    font-family: "Nunito", serif;
     background-image: url("/images/fundo.jpg");
     background-position: center;
     background-repeat: no-repeat;
