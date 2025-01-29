@@ -1,21 +1,21 @@
 :root {
-  --cor-fundo: #6EC1E4;
-  --cor-letras: #000;
+  --cor-fundo: #52C5F2;
+  --cor-fundo-sobre: #0079BB;
+  --cor-letras: #1a1919;
   
   --cor-branca: #fff;
-  --cor-branca-acinzentada: #f2f2f2;
+  --cor-branca-acinzentada: #F5F5F5;
   
-  --cor-laranja: #FFA500;
-  --cor-btn-hover: #FFD700;
+  --cor-laranja: #FFD700;
+  --cor-btn-hover: #FF8C00;
  
 
   --cor-fundo-amarelo: #FFD170;
   --cor-fundo-amarelo-claro: #FCDF9B;
 
-  --cor-roxo: #DDA0DD;
-  --cor-rosa: #FFB6C1;
-  --cor-verde: #B2F2BB;
-  --cor-vermelho: #FF6F61;
+  --cor-roxo: #BA55D3;
+  --cor-verde-claro: #A8E6CF;
+  --cor-verde-verificar: #09A603;
 }
 
 
@@ -27,6 +27,7 @@
 
   body {
     width: 100%;
+    color: var(--cor-letras);
     font-family: "Nunito", serif;
     background-image: url("/images/fundo.jpg");
     background-position: center;

@@ -3,9 +3,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--cor-branca-acinzentada);
+    background-color: var(--cor-fundo);
     padding: 10px;
-    border-top: 3px solid var(--cor-branca-acinzentada);
 
     p {
         font-size: 18px;

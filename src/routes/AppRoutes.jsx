@@ -12,15 +12,14 @@ function AppRoutes() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<><Header/><HomePage/></>}/>
-        <Route path="/conheca-mais" element={<><Header/><SobrePage/></>}/>
+        <Route path="/" element={<><Header/><HomePage/><Footer/></>}/>
+        <Route path="/conheca-mais" element={<><Header/><SobrePage/><Footer/></>}/>
         
         <Route path='/jogo-memoria' element={<JogoMemoria/>}/>
         <Route path='/forme-palavras' element={<FormePalavras/>}/>
         <Route path='/formas-geometricas' element={<JogoGeometrico/>}/>
         <Route path='/combine-cores' element={<CombineCores/>}/>
       </Routes>
-      <Footer/>
     </Router>
   )
 }

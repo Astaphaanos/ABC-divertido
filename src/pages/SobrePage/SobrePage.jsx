@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import './SobrePage.css';
 
 const SobrePage = () => {
@@ -8,7 +9,7 @@ const SobrePage = () => {
             </div>
 
             <div className='descricao-sobre'>
-                <h3>O que é o ABC Divertido?</h3>
+                <span>O que é o ABC Divertido?</span>
                 <p>O ABC Divertido é uma ferramenta online que utiliza jogos interativos e 
                 histórias para ajudar crianças no processo de desenvolvimento.</p>
             </div>
@@ -36,6 +37,19 @@ const SobrePage = () => {
                 os resultados. Os pais podem ajudar seus filhos a explorar os jogos, reforçar o aprendizado com 
                 exemplos do dia a dia e criar momentos únicos de conexão em família.
                 </p>
+            </div>
+
+            <div className='conheca-jogos-container'>
+                <div className='jogos-image'>
+                    <img src="/src/assets/sobre-mascote.png" alt="Macaco fofo jogando" />
+                </div>
+                <div className='jogos-info'>
+                    <h3>Jogos do ABC Divertido</h3>
+                    <p>Conheça os jogos que reunem diversão, aprendizado e troca de experiência entre adultos e crianças.</p>
+                    <button type='button'>
+                        <Link to='/'>Acesse</Link>
+                    </button>
+                </div>
             </div>
         </section>
     )

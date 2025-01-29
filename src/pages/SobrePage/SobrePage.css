@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 30px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -16,8 +16,8 @@
     padding: 34px;
 
     h1 {
-        font-size: 42px;
-        font-weight: 600;
+        font-size: 46px;
+        font-weight: 800;
         text-align: center;
         
     }
@@ -30,14 +30,14 @@
 
 .info-sobre {
     background-color: var(--cor-fundo-amarelo);
-    padding: 30px;
+    padding: 60px;
     margin: 40px 0;
     border-radius: 20px;
 }
 
 .pais-sobre {
     background-color: var(--cor-fundo-amarelo-claro);
-    padding: 30px;
+    padding: 60px;
     margin-bottom: 20px;
     border-radius: 20px;
 }
@@ -46,15 +46,65 @@
     width: 80%;
     padding-top: 30px;
 
+    span {
+        color: var(-cor-fundo-sobre);
+        font-size: 36px;
+        font-weight: 800;
+        padding-bottom: 8px;
+    }
+
     h3 {
-        font-size: 28px;
-        font-weight: 600;
+        font-size: 36px;
+        font-weight: 800;
         padding-bottom: 8px;
     }
 
     p {
         font-size: 22px;
         text-align: justify;
+    }
+}
+
+.conheca-jogos-container {
+    background-color: var(--cor-fundo-sobre);
+    padding: 16px;
+    color: var(--cor-branca);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .jogos-info {
+        margin-left: 10px;
+
+        h3 {
+            font-size: 36px;
+            font-weight: 700;
+            padding: 10px 0;
+        }
+    
+        p {
+            padding: 10px 0;
+            font-size: 18px;
+            width: 90%;
+        }
+    
+        button {
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background-color: var(--cor-branca-acinzentada);
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+    }
+
+    .jogos-image {
+        img {
+            width: 250px;
+        }
     }
 }
 

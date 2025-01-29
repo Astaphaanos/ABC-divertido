@@ -6,16 +6,13 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-image: url('/src/assets/fundo-memoria.jpg');
-  background-position: right;
-  background-repeat: repeat;
-  background-size: 120px;
+  background: linear-gradient(90deg, #3B7312, #F2A922, #F28705);
   position: relative;
 
   h1 {
     font-size: 52px;
     padding-bottom: 40px;
-    color: var(--cor-letra);
+    color: var(--cor-branca);
     font-weight: 800;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.151);
   }
@@ -91,7 +88,7 @@
   z-index: 2; /* Para garantir que o conteúdo fique acima do fundo */
   width: 100px;
   height: 100px;
-  background-color: #ebc96e;
+  background-color: #D9BB84;
   border-radius: 10px;
   display: flex;
   justify-content: center;

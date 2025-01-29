@@ -13,7 +13,7 @@
 
 /*Imagem*/
 .imagem-palavra {
-    width: 340px;
+    width: 300px;
 }
 
 /*Letras embaralhadas*/
@@ -21,7 +21,7 @@
     padding: 20px;
 
     .btn-letra {
-        background-color: rgb(157, 201, 82);
+        background-color: var(--cor-branca-acinzentada);
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
         padding: 30px;
         border-radius: 20px;
@@ -29,8 +29,13 @@
         margin-right: 10px;
         font-size: 20px;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 800;
         cursor: pointer;
+        transition: ease-in 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
@@ -57,12 +62,17 @@
 .botao-verificar {
     padding: 12px 30px;
     font-size: 18px;
-    background-color: green;
+    background-color: var(--cor-verde-verificar);
     border: none;
     border-radius: 20px;
     color: var(--cor-branca);
     font-weight: 700;
     cursor: pointer;
+
+    &:hover {
+        background-color: #3CBE2A;
+        transform: scale(1.1);   
+    }
 }
 
 /*Container de Parabéns*/
@@ -88,6 +98,11 @@
         border: none;
         border-radius: 20px;
         cursor: pointer;
+
+        &:hover {
+            background-color: var(--cor-btn-hover);
+            transform: scale(1.1);
+        }
     }
 }
 

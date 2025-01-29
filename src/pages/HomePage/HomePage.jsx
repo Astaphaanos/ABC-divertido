@@ -54,8 +54,8 @@ const HomePage = () => {
 
                     <div className='games_home_section'>
                         {games.map((game) =>(
-                            <div key={game.id} className='games_cards'>
-                                <div className='image-container' style={{backgroundColor: game.cor}}>
+                            <div key={game.id} className='games_cards' style={{backgroundColor: game.cor}}>
+                                <div className='image-container'>
                                     <img src={game.image} alt={game.nome}/>
                                 </div>
                                 <h3>{game.title}</h3>

@@ -11,19 +11,19 @@ const perguntas = [
     {id:6, nome: 'pantera', cor: 'Preto', imagem: 'https://img.icons8.com/color/150/black-jaguar.png'},
     {id:7, nome: 'urso', cor: 'Marrom', imagem: 'https://img.icons8.com/color/150/bear-full-body.png'},
     {id:8, nome: 'cobra', cor: 'Verde', imagem: 'https://img.icons8.com/color/150/snake.png'},
-    {id:9, nome: 'cavalo', cor: 'Cinza', imagem: 'https://img.icons8.com/color/150/horse.png'},
+    {id:9, nome: '', cor: 'Azul', imagem: 'https://img.icons8.com/emoji/150/dolphin-emoji.png'},
 ];
 
 const cores = [
-    {nome: "Vermelho", estilo: {color: 'red'}},
-    {nome: "Laranja", estilo: {color: 'orange'}},
-    {nome: "Rosa", estilo: {color: 'pink'}},
-    {nome: "Amarelo", estilo: {color: 'yellow'}},
-    {nome: "Branco", estilo: {color: 'white'}},
-    {nome: "Preto", estilo: {color: 'black'}},
-    {nome: "Marrom", estilo: {color: 'brown'}},
-    {nome: "Verde", estilo: {color: 'green'}},
-    {nome: "Cinza", estilo: {color: 'gray'}},
+    {nome: "Vermelho", estilo: {color: '#FF0702'}},
+    {nome: "Laranja", estilo: {color: '#FF8F00'}},
+    {nome: "Rosa", estilo: {color: '#FF8A80'}},
+    {nome: "Amarelo", estilo: {color: '#FFE100'}},
+    {nome: "Branco", estilo: {color: '#fff'}},
+    {nome: "Preto", estilo: {color: '#000'}},
+    {nome: "Marrom", estilo: {color: '#795548'}},
+    {nome: "Verde", estilo: {color: '#7CB342'}},
+    {nome: "Azul", estilo: {color: '#0061FF'}},
 ]
 
 const CombineCores = () => {
