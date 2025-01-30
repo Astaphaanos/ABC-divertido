@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./JogoGeometrico.css";
+import BtnFimJogo from "../../../components/BtnFimJogo/BtnFimJogo";
 
 const formas = [
   { nome: "Círculo", imagem: "https://img.icons8.com/sf-regular/400/FA5252/circled.png"},
@@ -55,13 +56,8 @@ const JogoFormasGeometricas = () => {
         <h1>Jogo das Formas Geométricas</h1>
         <p>Pontuação: {pontuacao}</p>
         
-             {jogoFinalizado ? (
-          <div className="mensagem_fim_jogo">
-            <h2>Parabéns! Você completou o jogo!</h2>
-            <button onClick={reiniciarJogo} className="btn-reiniciar">
-              Jogar Novamente
-            </button>
-          </div>
+          {jogoFinalizado ? (
+          <BtnFimJogo jogarNovamente={reiniciarJogo} />
         ) : (
           <>
             {formaAtual && (

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { MdBackspace } from 'react-icons/md'; 
+import BtnFimJogo from "../../../components/BtnFimJogo/BtnFimJogo";
 import "./FormePalavras.css";
 
 const palavras = [
@@ -93,12 +94,7 @@ const JogoFormarPalavras  = () => {
   return (
     <div className="jogo-formar-palavras">
       {jogoFinalizado ? (
-
-        <div className="parabens-container">
-          <h2>Parabéns, você completou o jogo!</h2>
-          <button onClick={reiniciarJogoPalavras}>Jogar Novamente</button>
-        </div>
-
+         <BtnFimJogo jogarNovamente={reiniciarJogoPalavras}/>
       ) : (
         <>
           <img src={palavraAtual.imagem} alt={palavraAtual.palavra} className="imagem-palavra"/>

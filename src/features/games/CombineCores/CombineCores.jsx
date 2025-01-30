@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import BtnFimJogo from "../../../components/BtnFimJogo/BtnFimJogo";
 import './CombineCores.css';
 
 //Lista de imagens
@@ -29,7 +30,6 @@ const cores = [
 const CombineCores = () => {
     const [indiceAtual, setIndiceAtual] = useState(0);
     const [mensagem, setMensagem] = useState('');
-    const [pontuacao, setPontuacao] = useState(0);
     const [jogoFinalizado, setJogoFinalizado] = useState(false);
 
     const perguntaAtual = perguntas[indiceAtual];
@@ -37,7 +37,6 @@ const CombineCores = () => {
     const lidarResposta = (corSelecionada) => {
         if (corSelecionada === perguntaAtual.cor) {
             setMensagem('Muito Bem!');
-            setPontuacao((prev) => prev + 1);
 
             // Próxima pergunta ou finaliza o jogo
             const proximoIndice = indiceAtual + 1;
@@ -55,7 +54,6 @@ const CombineCores = () => {
         setJogoFinalizado(false);
         setMensagem('');
         setIndiceAtual(0)
-        setPontuacao(0)
     };
 
     return(
@@ -84,13 +82,7 @@ const CombineCores = () => {
           {mensagem && <div className="mensagem_container">{mensagem}</div>}
         </>
       ) : (
-        <div className="pontuacao_container">
-          <h2>Parabéns!</h2>
-          <p>Você acertou {pontuacao} de {perguntas.length}!</p>
-          <button onClick={reiniciarJogo} className="btn-reiniciar">
-            Jogar Novamente
-          </button>
-        </div>
+        <BtnFimJogo jogarNovamente={reiniciarJogo}/>
       )}
     </div>
     );

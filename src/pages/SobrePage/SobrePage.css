@@ -28,6 +28,20 @@
     }
 }
 
+.descricao-sobre .paragrafos-descricao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+
+    p {
+        padding: 26px;
+        text-align: justify;
+        font-size: 22px;
+        text-align: justify;
+        margin: 0;
+    }
+}
+
 .info-sobre {
     background-color: var(--cor-fundo-amarelo);
     padding: 60px;
@@ -47,10 +61,10 @@
     padding-top: 30px;
 
     span {
-        color: var(-cor-fundo-sobre);
+        color: var(--cor-fundo-sobre);
         font-size: 36px;
         font-weight: 800;
-        padding-bottom: 8px;
+        padding-left: 22px;
     }
 
     h3 {

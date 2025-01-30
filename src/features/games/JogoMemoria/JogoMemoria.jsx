@@ -1,7 +1,7 @@
 import './JogoMemoria.css';
 import { useState, useEffect } from 'react';
-import confetti from 'canvas-confetti';
-import { FaRedo } from 'react-icons/fa';
+import BtnFimJogo from '../../../components/BtnFimJogo/BtnFimJogo';
+
 
 const images = [
     { id: 1, src:'https://img.icons8.com/plasticine/400/dog.png', matched: false },
@@ -70,6 +70,7 @@ const JogoMemoria = () => {
     setPrimeiraEscolha(null);
     setSegundaEscolha(null);
     setDisabled(false);
+    setJogoFinalizado(false)
   }
 
   // Verifica se o jogo foi concluído e colocar o canvas-confetti
@@ -77,33 +78,15 @@ const JogoMemoria = () => {
     if (cards.length > 0 && cards.every((card) => card.matched)) {
       setTimeout(() => {
         setJogoFinalizado(true);
-        // Disparar os confetes
-        confetti({
-          particleCount: 150,
-          spread: 60,
-          origin: { y: 0.6 }, // Ajusta para os confetes "subirem"
-          colors: ['#ff0000', '#00ff00', '#0000ff'], 
-        });
       }, 500);
     }
   }, [cards]);
-
   return (
     <div className="jogo_memoria">
       <h1>Jogo da memória</h1>
 
       {/*Mensagem quando o jogo for finalizado */}
-      {jogoFinalizado && (
-        <div className="jogo_finalizado_container">
-          <div className="jogo_finalizado_info">
-            <h2>Parabéns!</h2>
-            <button onClick={embaralharCartas}>
-                <FaRedo size={24} color="white" />
-            </button>
-          </div>
-        </div>
-      )}
-
+      {jogoFinalizado && <BtnFimJogo jogarNovamente={embaralharCartas}/> }
 
       <div className="card_grid_jogo">
         {cards.map((card) => (

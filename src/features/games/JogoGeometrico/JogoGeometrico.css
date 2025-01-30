@@ -47,30 +47,6 @@
   }
 }
 
-.mensagem_fim_jogo {
-  h2 {
-    font-size: 40px;
-    padding: 10px;
-  }
-  
-  .btn-reiniciar {
-    padding: 12px 40px;
-    border: none;
-    background-color: var(--cor-laranja);
-    font-size: 18px;
-    color: var(--cor-branca);
-    font-weight: 700;
-    border-radius: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-
-    &:hover {
-      transform: scale(1.1);
-      background-color: var(--cor-btn-hover);
-    }
-  }
-}
-
 @media (max-width: 556px) {
   .opcoes_formas {
     display: grid;

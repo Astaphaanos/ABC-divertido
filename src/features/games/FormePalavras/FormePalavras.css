@@ -75,37 +75,6 @@
     }
 }
 
-/*Container de Parabéns*/
-.parabens-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    h2 {
-        font-size: 46px;
-        color: var(--cor-letras);
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.267);
-    }
-
-    button {
-        padding: 20px 40px;
-        margin-top: 30px;
-        color: var(--cor-branca);
-        font-size: 18px;
-        font-weight: 700;
-        background-color: var(--cor-laranja);
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: var(--cor-btn-hover);
-            transform: scale(1.1);
-        }
-    }
-}
-
 @media (min-width: 304px) and (max-width: 426px) {
     .imagem-palavra {
         width: 280px;

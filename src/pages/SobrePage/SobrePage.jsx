@@ -10,10 +10,16 @@ const SobrePage = () => {
 
             <div className='descricao-sobre'>
                 <span>O que é o ABC Divertido?</span>
-                <p>O ABC Divertido é uma ferramenta online que utiliza jogos interativos e 
-                histórias para ajudar crianças no processo de desenvolvimento.</p>
+                <div className='paragrafos-descricao'>
+                    <p>O ABC Divertido é uma plataforma online inovadora que transforma o aprendizado em uma experiência lúdica e envolvente para crianças, ajudando-as a explorar o conhecimento de forma prazerosa. Com uma abordagem interativa, oferecemos uma variedade de jogos e atividades que estimulam o desenvolvimento cognitivo e emocional dos pequenos.<br/>
+                    Nossos jogos são projetados para ensinar conceitos fundamentais, como o alfabeto, números e habilidades de raciocínio lógico, enquanto as histórias cativantes incentivam a imaginação e a criatividade. Cada atividade é cuidadosamente elaborada para promover o aprendizado ativo, permitindo que as crianças aprendam brincando.
+
+                    </p>
+                    <p>A plataforma é intuitiva e acessível, permitindo que crianças de diferentes idades e níveis de habilidade se divirtam enquanto aprendem. Com um design amigável e interações simples, o ABC Divertido é ideal para pais que desejam proporcionar uma experiência de aprendizado enriquecedora para seus filhos.<br/>
+                    No ABC Divertido, estamos comprometidos em criar um ambiente seguro e estimulante para o aprendizado. Junte-se a nós e descubra como o aprendizado pode ser uma aventura emocionante, onde cada conquista é celebrada e cada desafio é uma oportunidade de crescimento. Venha explorar o mundo do conhecimento de forma divertida e interativa!
+                    </p>
+                </div>
             </div>
-            
             <div className='info-sobre'>
                 <h3>Como Funciona?</h3>
                 <p>
