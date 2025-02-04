@@ -8,7 +8,8 @@ const games = [
         description: "Reconheça as formas e escolha a certa!",
         image: 'https://img.icons8.com/pastel-glyph/400/7950F2/falling-star--v2.png',
         route: 'formas-geometricas',
-        cor: '#B2C8FF'
+        cor: '#fff',
+        background: '#B2C8FF'
     },
 
     {
@@ -17,7 +18,8 @@ const games = [
         description: "Encontre os pares de bichinhos e teste sua memória!",
         image: 'https://img.icons8.com/color/400/group-of-animals.png',
         route: 'jogo-memoria',
-        cor: '#E59F34'
+        cor: '#fff',
+        background: '#FFB845'
     },
 
     {
@@ -26,7 +28,8 @@ const games = [
         description: "Forme palavras juntando as letras corretas!",
         image: "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/400/external-dinosaur-museum-flaticons-lineal-color-flat-icons-2.png",
         route: 'forme-palavras',
-        cor: '#F2A2B8'
+        cor: '#fff',
+        background: '#F2A2B8'
       },
 
 
@@ -36,7 +39,8 @@ const games = [
         description: "Observe as imagens e diga qual é a cor certa!",
         image: "https://img.icons8.com/office/400/paint-palette.png",
         route: 'combine-cores',
-        cor: '#F2454F'
+        cor: '#fff',
+        background: '#FF5959'
       },
 ]
 
@@ -54,8 +58,8 @@ const HomePage = () => {
 
                     <div className='games_home_section'>
                         {games.map((game) =>(
-                            <div key={game.id} className='games_cards' style={{backgroundColor: game.cor}}>
-                                <div className='image-container'>
+                            <div key={game.id} className='games_cards' style={{backgroundColor: game.background}}>
+                                <div className='image-container' style={{backgroundColor: game.cor}}>
                                     <img src={game.image} alt={game.nome}/>
                                 </div>
                                 <h3>{game.title}</h3>

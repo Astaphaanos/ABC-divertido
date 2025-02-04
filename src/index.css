@@ -1,10 +1,10 @@
 :root {
-  --cor-fundo: #52C5F2;
+  --cor-fundo: #B4DBFC;
   --cor-fundo-sobre: #0079BB;
   --cor-letras: #1a1919;
   
   --cor-branca: #fff;
-  --cor-branca-acinzentada: #F5F5F5;
+  --cor-branca-acinzentada: #f3f0f0;
   
   --cor-laranja: #FFD700;
   --cor-btn-hover: #FF8C00;
@@ -12,10 +12,6 @@
 
   --cor-fundo-amarelo: #FFD170;
   --cor-fundo-amarelo-claro: #FCDF9B;
-
-  --cor-roxo: #BA55D3;
-  --cor-verde-claro: #A8E6CF;
-  --cor-verde-verificar: #09A603;
 }
 
 

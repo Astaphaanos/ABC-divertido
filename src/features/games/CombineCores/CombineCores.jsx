@@ -30,13 +30,16 @@ const cores = [
 const CombineCores = () => {
     const [indiceAtual, setIndiceAtual] = useState(0);
     const [mensagem, setMensagem] = useState('');
+    const [corMensagem, setCorMensagem] = useState('')
     const [jogoFinalizado, setJogoFinalizado] = useState(false);
 
     const perguntaAtual = perguntas[indiceAtual];
 
     const lidarResposta = (corSelecionada) => {
         if (corSelecionada === perguntaAtual.cor) {
-            setMensagem('Muito Bem!');
+            setMensagem('Você acertou! Muito Bem!');
+            setCorMensagem('green')
+            
 
             // Próxima pergunta ou finaliza o jogo
             const proximoIndice = indiceAtual + 1;
@@ -46,7 +49,8 @@ const CombineCores = () => {
                 setJogoFinalizado(true);
               }
         } else {
-            setMensagem("Tente Novamente")
+            setMensagem("Você errou! Tente Novamente!")
+            setCorMensagem('red')
         }
     };
     
@@ -79,7 +83,11 @@ const CombineCores = () => {
             ))}
           </div>
 
-          {mensagem && <div className="mensagem_container">{mensagem}</div>}
+          {mensagem && 
+          <div className="mensagem_container" style={{color: corMensagem}}>
+            {mensagem}
+          </div>
+          }
         </>
       ) : (
         <BtnFimJogo jogarNovamente={reiniciarJogo}/>
