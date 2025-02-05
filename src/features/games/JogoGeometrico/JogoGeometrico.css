@@ -1,12 +1,31 @@
+
 .jogo_formas_container {
-  height: 100vh;
+  background: linear-gradient(to bottom, #D4F1F9, #FEEA8D);
+
+  .btn-voltar {
+    cursor: pointer;
+    padding: 10px;
+
+    button {
+      display: flex;
+      align-items: center;
+      color: var(--cor-letras);
+      font-size: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.jogo_formas_section {
+  height: 94vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(to bottom, #D4F1F9, #FEEA8D);
 
   h1 {
     font-size: 50px;
@@ -54,10 +73,21 @@
     row-gap: 20px;   
     padding-right: 8px;
   }
+
+  .jogo_formas_container .btn-voltar {
+    
+    button {
+      font-size: 18px;
+    }
+
+    .fa-angle-icon {
+      font-size: 22px;
+    }
+  }
 }
 
 @media (max-width: 332px) {
-  .jogo_formas_container {
+  .jogo_formas_section {
     height: auto;
 
     h1 {
@@ -82,5 +112,16 @@
 
   .forma_atual  .imagem-forma {
     width: 160px;
+  }
+
+  .jogo_formas_container .btn-voltar {
+    
+    button {
+      font-size: 16px;
+    }
+
+    .fa-angle-icon {
+      font-size: 22px;
+    }
   }
 }

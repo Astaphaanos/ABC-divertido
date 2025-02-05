@@ -54,7 +54,7 @@
     justify-content: center;
     text-align: center;
     border-radius: 20px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
     width: 300px;
     height: 500px;
     transition: transform 0.3s ease;
@@ -129,85 +129,4 @@
     }
   }
 
-
-@media (max-width: 952px) {
-    .games_home_section {
-        grid-template-columns: 2fr 2fr;
-        row-gap: 30px;
-    }
-}
-
-@media (min-width: 762px) {
-    .home_section h1 {
-        font-size: 36px;
-    }
-
-    .home_banner_info > p {
-        padding: 10px 60px;
-    }
-
-    .games_cards h3{
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 688px) {
-    .home_section h1 {
-        font-size: 34px;
-    }
-
-    .home_banner_info > p {
-        padding: 8px 40px;
-    }
-
-    .games_cards {
-        h3 {
-            font-size: 20px;
-        }
-    }
-}
-
-
-@media (max-width: 632px) {
-    .home_section  {
-        height: auto;
-        padding: 40px;
-    }
-
-    .games_home_section {
-        grid-template-columns: 1fr;
-    }
-
-    .home_section h1 {
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .home_banner_info > p {
-        padding: 8px 40px;
-    }
-
-    .games_cards {
-        h3 {
-            font-size: 22px;
-        }
-
-        p { 
-            font-size: 18px;
-        }
-    }
-
-}
-
-@media (max-width: 452px) {
-    .home_banner_info {
-        width: 120%;
-    }
-}
-
-@media (max-width: 396px) {
-    .home_banner_info {
-        width: 140%;
-    }
-}
-
+/*Fazer media querie*/

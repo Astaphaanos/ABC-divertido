@@ -1,99 +1,167 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { FaAngleLeft } from "react-icons/fa6";
+import { Link } from "react-router";
 import BtnFimJogo from "../../../components/BtnFimJogo/BtnFimJogo";
-import './CombineCores.css';
+import "./CombineCores.css";
 
 //Lista de imagens
 const perguntas = [
-    {id:1, nome: 'maçã', cor: 'Vermelho', imagem: 'https://img.icons8.com/color/150/whole-apple.png'},
-    {id:2, nome: 'cenoura', cor: 'Laranja', imagem: 'https://img.icons8.com/emoji/150/carrot-emoji.png'},
-    {id:3, nome: 'flamingo', cor: 'Rosa', imagem: 'https://img.icons8.com/color/150/flamingo.png'},
-    {id:4, nome: 'banana', cor: 'Amarelo', imagem: 'https://img.icons8.com/color/159/banana.png'},
-    {id:5, nome: 'ganso', cor: 'Branco', imagem: 'https://img.icons8.com/color/150/goose.png'},
-    {id:6, nome: 'pantera', cor: 'Preto', imagem: 'https://img.icons8.com/color/150/black-jaguar.png'},
-    {id:7, nome: 'urso', cor: 'Marrom', imagem: 'https://img.icons8.com/color/150/bear-full-body.png'},
-    {id:8, nome: 'cobra', cor: 'Verde', imagem: 'https://img.icons8.com/color/150/snake.png'},
-    {id:9, nome: '', cor: 'Azul', imagem: 'https://img.icons8.com/emoji/150/dolphin-emoji.png'},
+  {
+    id: 1,
+    nome: "maçã",
+    cor: "Vermelho",
+    imagem: "https://img.icons8.com/color/150/whole-apple.png",
+  },
+  {
+    id: 2,
+    nome: "cenoura",
+    cor: "Laranja",
+    imagem: "https://img.icons8.com/emoji/150/carrot-emoji.png",
+  },
+  {
+    id: 3,
+    nome: "flamingo",
+    cor: "Rosa",
+    imagem: "https://img.icons8.com/color/150/flamingo.png",
+  },
+  {
+    id: 4,
+    nome: "banana",
+    cor: "Amarelo",
+    imagem: "https://img.icons8.com/color/159/banana.png",
+  },
+  {
+    id: 5,
+    nome: "ganso",
+    cor: "Branco",
+    imagem: "https://img.icons8.com/color/150/goose.png",
+  },
+  {
+    id: 6,
+    nome: "pantera",
+    cor: "Preto",
+    imagem: "https://img.icons8.com/color/150/black-jaguar.png",
+  },
+  {
+    id: 7,
+    nome: "urso",
+    cor: "Marrom",
+    imagem: "https://img.icons8.com/color/150/bear-full-body.png",
+  },
+  {
+    id: 8,
+    nome: "cobra",
+    cor: "Verde",
+    imagem: "https://img.icons8.com/color/150/snake.png",
+  },
+  {
+    id: 9,
+    nome: "",
+    cor: "Azul",
+    imagem: "https://img.icons8.com/emoji/150/dolphin-emoji.png",
+  },
 ];
 
 const cores = [
-    {nome: "Vermelho", estilo: {color: '#FF0702'}},
-    {nome: "Laranja", estilo: {color: '#FF8F00'}},
-    {nome: "Rosa", estilo: {color: '#FF8A80'}},
-    {nome: "Amarelo", estilo: {color: '#FFE100'}},
-    {nome: "Branco", estilo: {color: '#fff'}},
-    {nome: "Preto", estilo: {color: '#000'}},
-    {nome: "Marrom", estilo: {color: '#795548'}},
-    {nome: "Verde", estilo: {color: '#7CB342'}},
-    {nome: "Azul", estilo: {color: '#0061FF'}},
-]
+  { nome: "Vermelho", estilo: { color: "#FF0702" } },
+  { nome: "Laranja", estilo: { color: "#FF8F00" } },
+  { nome: "Rosa", estilo: { color: "#FF8A80" } },
+  { nome: "Amarelo", estilo: { color: "#FFE100" } },
+  { nome: "Branco", estilo: { color: "#fff" } },
+  { nome: "Preto", estilo: { color: "#000" } },
+  { nome: "Marrom", estilo: { color: "#795548" } },
+  { nome: "Verde", estilo: { color: "#7CB342" } },
+  { nome: "Azul", estilo: { color: "#0061FF" } },
+];
 
 const CombineCores = () => {
-    const [indiceAtual, setIndiceAtual] = useState(0);
-    const [mensagem, setMensagem] = useState('');
-    const [corMensagem, setCorMensagem] = useState('')
-    const [jogoFinalizado, setJogoFinalizado] = useState(false);
+  const [indiceAtual, setIndiceAtual] = useState(0);
+  const [mensagem, setMensagem] = useState("");
+  const [corMensagem, setCorMensagem] = useState("");
+  const [jogoFinalizado, setJogoFinalizado] = useState(false);
 
-    const perguntaAtual = perguntas[indiceAtual];
+  const perguntaAtual = perguntas[indiceAtual];
 
-    const lidarResposta = (corSelecionada) => {
-        if (corSelecionada === perguntaAtual.cor) {
-            setMensagem('Você acertou! Muito Bem!');
-            setCorMensagem('green')
-            
+  const lidarResposta = (corSelecionada) => {
+    if (corSelecionada === perguntaAtual.cor) {
+      setMensagem("Você acertou! Muito Bem!");
+      setCorMensagem("green");
 
-            // Próxima pergunta ou finaliza o jogo
-            const proximoIndice = indiceAtual + 1;
-              if (proximoIndice < perguntas.length) {
-                setIndiceAtual(proximoIndice);
-              } else {
-                setJogoFinalizado(true);
-              }
-        } else {
-            setMensagem("Você errou! Tente Novamente!")
-            setCorMensagem('red')
-        }
-    };
-    
-    const reiniciarJogo = () => {
-        setJogoFinalizado(false);
-        setMensagem('');
-        setIndiceAtual(0)
-    };
+      // Próxima pergunta ou finaliza o jogo
+      const proximoIndice = indiceAtual + 1;
+      if (proximoIndice < perguntas.length) {
+        setIndiceAtual(proximoIndice);
+      } else {
+        setJogoFinalizado(true);
+      }
+    } else {
+      setMensagem("Você errou! Tente Novamente!");
+      setCorMensagem("red");
+    }
+  };
 
-    return(
-        <div className='cores_jogo_container'>
-            {!jogoFinalizado ? (
-        <>
-          <h1>Descubra a Cor</h1>
-          <div className="pergunta_container">
-            <img src={perguntaAtual.imagem} alt={perguntaAtual.nome} className="imagem_pergunta" />
-            <p>Qual é a cor do(a) {perguntaAtual.nome}?</p>
-          </div>
+  const reiniciarJogo = () => {
+    setJogoFinalizado(false);
+    setMensagem("");
+    setIndiceAtual(0);
+  };
 
-          <div className="opcoes_container">
-            {cores.sort(() => Math.random() - 0.5).map((cor) => (
-              <button
-                key={cor.nome}
-                style={cor.estilo}
-                onClick={() => lidarResposta(cor.nome)}
-                className="btn_opcoes"
+  return (
+    <div className="cores_jogo_container">
+
+      <div className="btn-voltar">
+        <Link to="/">
+          <button>
+          <FaAngleLeft color="black" fontSize={30} className="fa-angle-icon" />
+            Voltar
+          </button>
+        </Link>
+      </div>
+
+      <div className="jogo_container">
+        {!jogoFinalizado ? (
+          <>
+
+            <div className="pergunta_container">
+              <h1>Descubra a Cor</h1>
+              <img
+                src={perguntaAtual.imagem}
+                alt={perguntaAtual.nome}
+                className="imagem_pergunta"
+              />
+              <p>Qual é a cor do(a) {perguntaAtual.nome}?</p>
+            </div>
+
+            <div className="opcoes_container">
+              {cores
+                .sort(() => Math.random() - 0.5)
+                .map((cor) => (
+                  <button
+                    key={cor.nome}
+                    style={cor.estilo}
+                    onClick={() => lidarResposta(cor.nome)}
+                    className="btn_opcoes"
+                  >
+                    {cor.nome}
+                  </button>
+                ))}
+            </div>
+
+            {mensagem && (
+              <div
+                className="mensagem_container"
+                style={{ color: corMensagem }}
               >
-                {cor.nome}
-              </button>
-            ))}
-          </div>
-
-          {mensagem && 
-          <div className="mensagem_container" style={{color: corMensagem}}>
-            {mensagem}
-          </div>
-          }
-        </>
-      ) : (
-        <BtnFimJogo jogarNovamente={reiniciarJogo}/>
-      )}
+                {mensagem}
+              </div>
+            )}
+          </>
+        ) : (
+          <BtnFimJogo jogarNovamente={reiniciarJogo} />
+        )}
+      </div>
     </div>
-    );
-}
+  );
+};
 
 export default CombineCores;

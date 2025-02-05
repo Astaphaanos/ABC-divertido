@@ -1,109 +1,136 @@
-
 /*Container do Jogo*/
 .jogo-formar-palavras {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to bottom, #FFE29A, #FFA9A3);
+  background: linear-gradient(to bottom, #ffe29a, #ffa9a3);
 
+  .btn-voltar {
+    cursor: pointer;
+    padding: 10px;
+
+    button {
+      display: flex;
+      align-items: center;
+      color: var(--cor-letras);
+      font-size: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.formar-palavras-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 94vh;
+  width: 100%;
 }
 
 /*Imagem*/
 .imagem-palavra {
-    width: 300px;
+  width: 300px;
 }
 
 /*Letras embaralhadas*/
 .letras-container {
-    padding: 20px;
+  padding: 20px;
 
-    .btn-letra {
-        background-color: var(--cor-branca-acinzentada);
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
-        padding: 30px;
-        border-radius: 20px;
-        border: none;
-        margin-right: 10px;
-        font-size: 20px;
-        text-transform: uppercase;
-        font-weight: 800;
-        cursor: pointer;
-        transition: ease-in 0.3s;
+  .btn-letra {
+    background-color: var(--cor-branca-acinzentada);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.295);
+    padding: 30px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    cursor: pointer;
+    transition: ease-in 0.3s;
 
-        &:hover {
-            transform: scale(1.1);
-        }
+    &:hover {
+      transform: scale(1.1);
     }
+  }
 }
 
 /*Container da Resposta que o usuário digitou*/
 .resposta-container {
-    padding: 20px;
-    display: flex;
-    font-size: 28px;
+  padding: 20px;
+  display: flex;
+  font-size: 28px;
 
-    h3 {
-        margin-right: 10px;
-    }
+  h3 {
+    margin-right: 10px;
+  }
 
-    /*Botão de apagar*/
-    .botao-apagar {
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding-left: 30px;
-    }
+  /*Botão de apagar*/
+  .botao-apagar {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 30px;
+  }
 }
 
 /*Botão de Verificar*/
 .botao-verificar {
-    padding: 12px 30px;
-    font-size: 18px;
-    background-color: var(--cor-verde-verificar);
-    border: none;
-    border-radius: 20px;
-    color: var(--cor-branca);
-    font-weight: 700;
-    cursor: pointer;
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: var(--cor-verde-verificar);
+  border: none;
+  border-radius: 20px;
+  color: var(--cor-branca);
+  font-weight: 700;
+  cursor: pointer;
 
-    &:hover {
-        background-color: #3CBE2A;
-        transform: scale(1.1);   
-    }
+  &:hover {
+    background-color: #3cbe2a;
+    transform: scale(1.1);
+  }
 }
 
-@media (min-width: 304px) and (max-width: 426px) {
-    .imagem-palavra {
-        width: 280px;
+@media (min-width: 304px) and (max-width: 451px) {
+  .imagem-palavra {
+    width: 280px;
+  }
+
+  .letras-container .btn-letra {
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .resposta-container h3,
+  .letras-resposta {
+    font-size: 24px;
+  }
+
+  .parabens-container {
+    h2 {
+      font-size: 40px;
+      text-align: center;
     }
 
-    .letras-container .btn-letra {
-        padding: 20px;
-        margin-top: 10px;
+    button {
+      padding: 18px 38px;
+      font-size: 16px;
+    }
+  }
+
+  .botao-verificar {
+    padding: 10px 28px;
+    font-size: 16px;
+  }
+
+  .jogo-formar-palavras .btn-voltar {
+
+    button{
+      font-size: 16px;
     }
 
-    .resposta-container h3, .letras-resposta {
-        font-size: 24px;
+    .fa-angle-icon {
+      font-size: 22px;
     }
-
-    .parabens-container {
-
-        h2 {
-            font-size: 40px;
-            text-align: center;
-        }
-
-        button {
-            padding: 18px 38px;
-            font-size: 16px
-        }
-    }  
-
-    .botao-verificar {
-        padding: 10px 28px;
-        font-size: 16px;
-    }
+  }
 }

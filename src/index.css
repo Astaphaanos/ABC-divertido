@@ -12,6 +12,7 @@
 
   --cor-fundo-amarelo: #FFD170;
   --cor-fundo-amarelo-claro: #FCDF9B;
+  --cor-verde-verificar: #09A603;
 }
 
 
@@ -29,6 +30,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    animation: moverFundo 15s linear infinite;
+  }
+  
+  @keyframes moverFundo {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 50% 50%; }
+    100% { background-position: 0% 0%; }
   }
   
   li {

@@ -1,6 +1,8 @@
-import './JogoMemoria.css';
 import { useState, useEffect } from 'react';
+import { FaAngleLeft } from "react-icons/fa6";
+import { Link } from "react-router";
 import BtnFimJogo from '../../../components/BtnFimJogo/BtnFimJogo';
+import './JogoMemoria.css';
 
 
 const images = [
@@ -73,7 +75,7 @@ const JogoMemoria = () => {
     setJogoFinalizado(false)
   }
 
-  // Verifica se o jogo foi concluído e colocar o canvas-confetti
+  // Verifica se o jogo foi concluído
   useEffect(() => {
     if (cards.length > 0 && cards.every((card) => card.matched)) {
       setTimeout(() => {
@@ -81,26 +83,38 @@ const JogoMemoria = () => {
       }, 500);
     }
   }, [cards]);
+  
   return (
     <div className="jogo_memoria">
-      <h1>Jogo da memória</h1>
+       <div className="btn-voltar">
+          <Link to="/">
+            <button>
+            <FaAngleLeft color="black" fontSize={30} className='fa-angle-icon'/>
+              Voltar
+            </button>
+          </Link>
+      </div>
 
-      {/*Mensagem quando o jogo for finalizado */}
-      {jogoFinalizado && <BtnFimJogo jogarNovamente={embaralharCartas}/> }
 
-      <div className="card_grid_jogo">
-        {cards.map((card) => (
-          <div
-            className={`card ${card.matched ? 'matched' : ''}`}
-            key={card.id}
-            onClick={() => lidarEscolhar(card)}
-          >
-            <img
-              src={card.matched || card === primeiraEscolha || card === segundaEscolha ? card.src : 'https://img.icons8.com/glyph-neue/400/dog-footprint.png'}
-              alt="card" 
-              className="card-image"/>
-          </div>
-        ))}
+
+      <div className='jogo_memoria_container'>
+        <h1>Jogo da memória</h1>
+        {/*Mensagem quando o jogo for finalizado */}
+        {jogoFinalizado && <BtnFimJogo jogarNovamente={embaralharCartas}/> }
+        <div className="card_grid_jogo">
+          {cards.map((card) => (
+            <div
+              className={`card ${card.matched ? 'matched' : ''}`}
+              key={card.id}
+              onClick={() => lidarEscolhar(card)}
+            >
+              <img
+                src={card.matched || card === primeiraEscolha || card === segundaEscolha ? card.src : 'https://img.icons8.com/glyph-neue/400/dog-footprint.png'}
+                alt="card"
+                className="card-image"/>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FaAngleLeft } from "react-icons/fa6";
+import { Link } from "react-router";
 import "./JogoGeometrico.css";
 import BtnFimJogo from "../../../components/BtnFimJogo/BtnFimJogo";
 
@@ -52,6 +54,17 @@ const JogoFormasGeometricas = () => {
 
   return (
     <div className="jogo_formas_container">
+      
+      <div className="btn-voltar">
+        <Link to="/">
+          <button>
+            <FaAngleLeft color="black" fontSize={30} className="fa-angle-icon"/>
+            Voltar
+          </button>
+        </Link>
+      </div>
+
+
       <div className="jogo_formas_section">
         <h1>Jogo das Formas Geométricas</h1>
         <p>Pontuação: {pontuacao}</p>

@@ -1,140 +1,196 @@
-
 .cores_jogo_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(45deg, #FF0702, #FF8F00,#FFE100,#48E30A,  #0061FF);
-    
-    
-    h1 {
-        font-size: 42px;
-        padding: 30px;
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    #ff0702,
+    #ff8f00,
+    #ffe100,
+    #48e30a,
+    #0061ff
+  );
+
+  .btn-voltar {
+    cursor: pointer;
+    padding: 10px;
+
+    button {
+      display: flex;
+      align-items: center;
+      color: var(--cor-letras);
+      font-size: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
     }
+  }
+}
+
+.jogo_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .pergunta_container {
-    text-align: center;
+  text-align: center;
 
-    .imagem_pergunta {
-        width: 160px;
-    }
+  h1 {
+    font-size: 42px;
+    padding: 30px;
+  }
 
-    p {
-        font-size: 26px;
-        font-weight: 700;
-        padding: 20px;
-    }
+  .imagem_pergunta {
+    width: 160px;
+  }
+
+  p {
+    font-size: 26px;
+    font-weight: 700;
+    padding: 20px;
+  }
 }
 
 .opcoes_container {
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 200px);
-    row-gap: 20px;
-    gap: 20px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  row-gap: 20px;
+  gap: 20px;
 
-    .btn_opcoes {
-        padding: 20px 30px;
-        margin-left: 10px;
-        background-color:  rgba(185, 183, 183, 0.822);
-        border: none;
-        border-radius: 20px;
-        font-size: 30px;
-        font-weight: 800;
-        cursor: pointer;
-        transition: ease-in 0.3s;
+  .btn_opcoes {
+    padding: 20px 30px;
+    margin-left: 10px;
+    background-color: rgba(185, 183, 183, 0.822);
+    border: none;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: ease-in 0.3s;
 
-        &:hover {
-            background-color: rgba(245, 245, 245, 0.822);
-            transform: scale(1.1);
-        }
+    &:hover {
+      background-color: rgba(245, 245, 245, 0.822);
+      transform: scale(1.1);
     }
+  }
 }
 
 .mensagem_container {
-    font-size: 36px;
-    font-weight: 800;
-    padding-top: 20px;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.411)
+  font-size: 36px;
+  font-weight: 800;
+  padding-top: 20px;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.411);
 }
 
 .pontuacao_container {
-    text-align: center;
-    
-    h2 {
-        font-size: 46px;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
+  text-align: center;
 
-    p {
-        font-size: 24px;
-        padding: 20px;
-        font-weight: 600;
-    }
+  h2 {
+    font-size: 46px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 
-    .btn-reiniciar {
-        padding: 20px 40px;
-        background-color: var(--cor-laranja);
-        border: none;
-        border-radius: 20px;
-        font-size: 18px;
-        color: var(--cor-branca);
-        font-weight: 700;
-        cursor: pointer;
+  p {
+    font-size: 24px;
+    padding: 20px;
+    font-weight: 600;
+  }
 
-        &:hover {
-            background-color: var(--cor-btn-hover);
-            transform: scale(1.1);
-        }
+  .btn-reiniciar {
+    padding: 20px 40px;
+    background-color: var(--cor-laranja);
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    color: var(--cor-branca);
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--cor-btn-hover);
+      transform: scale(1.1);
     }
+  }
 }
 
 @media (max-width: 611px) {
-    .opcoes_container  {
-        grid-template-columns: repeat(2, 200px);
+  .opcoes_container {
+    grid-template-columns: repeat(2, 200px);
 
-        .btn_opcoes {
-            font-size: 26px;
-        }
+    .btn_opcoes {
+      font-size: 26px;
     }
+  }
+
+  .cores_jogo_container .btn-voltar {
+    
+    button {
+      font-size: 18px;
+    }
+
+    .fa-angle-icon {
+      font-size: 24px;
+    }
+  }
 }
 
 @media (max-width: 417px) {
-    .cores_jogo_container h1 {
-        font-size: 38px;
+  .pergunta_container h1 {
+    font-size: 38px;
+  }
+  
+  .pergunta_container .imagem_pergunta {
+    width: 140px;
+  }
+  
+  .opcoes_container {
+    grid-template-columns: repeat(2, 160px);
+
+    .btn_opcoes {
+      font-size: 24px;
+    }
+  }
+
+  .cores_jogo_container .btn-voltar {
+    
+    button {
+      font-size: 16px;
     }
 
-    .opcoes_container  {
-        grid-template-columns: repeat(2, 160px);
-
-        .btn_opcoes {
-            font-size: 24px;
-        }
+    .fa-angle-icon {
+      font-size: 22px;
     }
+  }
 
-    .pergunta_container .imagem_pergunta {
-        width: 140px;
-    }
 }
 
-
 @media (max-width: 349px) {
-    .cores_jogo_container h1 {
-        font-size: 36px;
+  .pergunta_container h1 {
+    font-size: 36px;
+  }
+  
+  .pergunta_container .imagem_pergunta {
+    width: 120px;
+  }
+  .opcoes_container {
+    grid-template-columns: repeat(1, 160px);
+
+    .btn_opcoes {
+      font-size: 22px;
+    }
+  }
+
+  .cores_jogo_container .btn-voltar {
+    
+    button {
+      font-size: 16px;
     }
 
-    .opcoes_container  {
-        grid-template-columns: repeat(1, 160px);
-
-        .btn_opcoes {
-            font-size: 22px;
-        }
+    .fa-angle-icon {
+      font-size: 22px;
     }
+  }
 
-    .pergunta_container .imagem_pergunta {
-        width: 120px;
-    }
 }
