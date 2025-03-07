@@ -7,14 +7,12 @@ Um site interativo e educativo para ajudar crianças a aprenderem o alfabeto de 
 Confira o projeto online: [ABC Divertido](https://abc-divertido.vercel.app/)
 
 ## 🛠️ Tecnologias Utilizadas
-
-- **HTML**: Estrutura do site.
-- **CSS**: Estilização e design responsivo.
 - **React**: Biblioteca JavaScript para construção de interfaces.
+- **CSS**: Estilização e design responsivo.
 - **Vercel**: Hospedagem e deploy do projeto.
 
 ## ✨ Funcionalidades
--**Jogos educativos**: Jogos que se tornaram aliados no processo de aprendizado das crianças
+- **Jogos educativos**: Jogos que se tornaram aliados no processo de aprendizado das crianças
 - **Design Amigável**: Cores vibrantes e imagens que atraem o público infantil.
 - **Responsivo**: Funciona bem em dispositivos móveis, tablets e desktops.
 - 
