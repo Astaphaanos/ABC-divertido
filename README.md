@@ -15,7 +15,7 @@ Confira o projeto online: [ABC Divertido](https://abc-divertido.vercel.app/)
 - **Jogos educativos**: Jogos que se tornaram aliados no processo de aprendizado das crianças
 - **Design Amigável**: Cores vibrantes e imagens que atraem o público infantil.
 - **Responsivo**: Funciona bem em dispositivos móveis, tablets e desktops.
-- 
+  
 ## 🎯 Objetivo
 Inspirada no meu primo, que passava muito tempo no celular assistindo a vídeos. As crianças de hoje em dia estão cada vez mais conectadas a dispositivos móveis. Sendo assim, percebi que a tecnologia poderia ser usada de forma mais benéfica, decidi transformar esse tempo de tela em uma oportunidade de aprendizado, criando jogos educativos que estimulam o desenvolvimento cognitivo, a criatividade e o raciocínio lógico de forma lúdica e interativa. O objetivo do ABC Divertido é oferecer uma alternativa divertida e educativa para crianças em fase de alfabetização e aprendizagem inicial, ajudando-as a desenvolver habilidades essenciais enquanto se divertem.
 vente.
